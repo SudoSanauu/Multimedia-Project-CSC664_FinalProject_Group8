@@ -8,9 +8,6 @@ if len(sys.argv) != 3:
 src_path = sys.argv[1]
 dest_path = sys.argv[2]
 
-print(src_path)
-print(dest_path)
-
 with open(src_path, 'r', encoding="utf8") as f:
     set_json = json.load(f)
 
@@ -26,9 +23,10 @@ parsedCards = []
 
 # above code works for different json files than we're using
 
-for c in set_json:
-	continue if names != []
-	
+for cname in set_json:
+	c = set_json[cname]
+	if 'names' in c and c['names'] != []: continue
+
 	if c.get("power") == "*":
 		power = 0.0
 	elif c.get("power") is None:
@@ -43,7 +41,7 @@ for c in set_json:
 	else:
 		toughness = float(c.get("toughness"))
 
-	c_info = {
+	card_info = {
 		"colorIdentity": c.get("colorIdentity"),
 		"colors": c.get("colors"),
 		"convertedManaCost": c.get("convertedManaCost"),
