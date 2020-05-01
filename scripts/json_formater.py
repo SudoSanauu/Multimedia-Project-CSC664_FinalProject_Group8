@@ -2,14 +2,14 @@ import sys
 import json
 
 if len(sys.argv) != 3:
-    print("Please put in src file and destination file.")
-    quit()
+	print("Please put in src file and destination file.")
+	quit()
 
 src_path = sys.argv[1]
 dest_path = sys.argv[2]
 
 with open(src_path, 'r', encoding="utf8") as f:
-    set_json = json.load(f)
+	set_json = json.load(f)
 
 parsedCards = []
 # cards = []
