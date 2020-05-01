@@ -2,7 +2,8 @@ import sys
 import json
 import re
 import numpy as np
-from nltk.tokenize import word_tokenize
+import text_processing as tp
+
 
 if len(sys.argv) != 3:
 	print("Please put in src file and destination file.")
@@ -15,14 +16,7 @@ print("reading from ", card_path)
 with open(card_path, 'r') as f:
 	cards = json.load(f)
 
-
-# compile re before hand for better performance
-no_reminder = re.compile("\([^)]*\)")
-no_useless = re.compile("[\.,'\"]")
-no_newline = re.compile("\n")
-space_colon = re.compile(":")
-split_on_space = re.compile(' ')
-
+# Constant declaration
 color_arr = ['W','U','B','R','G']
 
 # create sets for all the parameters we care about keeping track of
@@ -36,25 +30,8 @@ supertype_set = set()
 # Loop 1 is to do all the text preprocessing and set up the matrix
 print("preprocessing ",len(cards), " cards...")
 for c in cards:
-	## Pre-Processing
-	# replace cardname with @ and makes all lowercase
-	new_text = c['text'].replace(c['name'], "@").lower()
-
-	# remove all reminder text in parens
-	new_text = no_reminder.sub("", new_text)
-
-	# get rid of useless characters
-	new_text = no_useless.sub("", new_text)
-
-	# replace \n with ' '
-	new_text = no_newline.sub(" ", new_text)
-
-	# edit : to be separated with spaces so it becomes its own token
-	new_text = space_colon.sub(' :', new_text)
-
-	## Set Population
-	# tokenize & transform to ngram the new text, then put in set
-	ngrams = split_on_space.split(new_text)
+	# right now unigrams, maybe change latter
+	ngrams = tp.rules_tokenize(c)
 
 	for ng in ngrams:
 		ngram_set.add(ng)
