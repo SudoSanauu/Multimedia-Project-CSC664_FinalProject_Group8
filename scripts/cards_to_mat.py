@@ -144,7 +144,6 @@ print(data_mat)
 
 with open(dest_path, 'wb') as f:
 	np.savez(f, data_mat=data_mat, card_names=np.array(card_names), attr_map=np.array(list(attr_map.items())))
-	# np.save(f, data_mat)
 
 
 
