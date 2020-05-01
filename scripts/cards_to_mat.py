@@ -19,8 +19,25 @@ with open(card_path, 'r') as f:
 # Constant declaration
 color_arr = ['W','U','B','R','G']
 
+# weight for each element in the matrix
+ngram_weight = 1.0
+color_wieght = 0.5
+colorid_weight = 0.5
+subtype_weight = 1.0
+type_weight = 1.0
+supertype_weight = 1.0
+cmc_weight = 1.0
+pwr_tgh_weight = 1.0
+
+
+def insert_incr_dict(inDict, token):
+	if token in inDict:
+		inDict[token] += 1
+	else:
+		 inDict[token] = 1
+
 # create sets for all the parameters we care about keeping track of
-ngram_set = set()
+ngram_doc_freq = {}
 subtype_set = set()
 type_set = set()
 supertype_set = set()
@@ -33,8 +50,8 @@ for c in cards:
 	# right now unigrams, maybe change latter
 	ngrams = tp.rules_tokenize(c)
 
-	for ng in ngrams:
-		ngram_set.add(ng)
+	for ng in set(ngrams):
+		insert_incr_dict(ngram_doc_freq,ng)
 	for subty in c['subtypes']:
 		subtype_set.add(subty)
 	for ty in c['types']:
@@ -49,11 +66,11 @@ for c in cards:
 # Now we will construct the matrix:
 # num_cards by (ngramms + subtypes + 7/15(types) + 2/7(supertypes) + 5(colors) + 5(color_ids) + 1(cmc) + 1(pwr) + 1(tgh))
 num_rows = len(cards)
-num_cols = len(ngram_set) + len(subtype_set) + len(type_set) + len(supertype_set) + 13
+num_cols = len(ngram_doc_freq) + len(subtype_set) + len(type_set) + len(supertype_set) + 13
 
 print('setting up matrices:')
 print('data_mat: ', num_rows, " x ", num_cols)
-print('ngram: ', len(ngram_set))
+print('ngram: ', len(ngram_doc_freq))
 print('subtype: ', len(subtype_set))
 print('type: ', len(type_set))
 print('supertype: ', len(supertype_set))
@@ -66,7 +83,7 @@ attr_map = {} # Map of attr name -> matrix col
 
 # Now for the loops where we set attr_map
 curr_col = 0
-for ng in ngram_set:
+for ng in ngram_doc_freq.keys():
 	attr_map['ngram~'+ng] = curr_col
 	curr_col += 1
 for subty in subtype_set:
@@ -99,24 +116,20 @@ for i in range(0,len(cards)):
 	card_names[i] = c['name']
 
 	for ng in c['ngrams']:
-		data_mat[i][attr_map['ngram~'+ng]] += 1.0
+		data_mat[i][attr_map['ngram~'+ng]] += (ngram_weight / ngram_doc_freq[ng])
 	for subty in c['subtypes']:
-		data_mat[i][attr_map['subty~'+subty]] += 1.0
+		data_mat[i][attr_map['subty~'+subty]] += subtype_weight
 	for ty in c['types']:
-		data_mat[i][attr_map['ty~'+ty]] += 1.0
+		data_mat[i][attr_map['ty~'+ty]] += type_weight
 	for supty in c['supertypes']:
-		data_mat[i][attr_map['supty~'+supty]] += 1.0
+		data_mat[i][attr_map['supty~'+supty]] += supertype_weight
 	for color in c['colors']:
-		data_mat[i][attr_map['color~'+color]] += 1.0
+		data_mat[i][attr_map['color~'+color]] += color_wieght
 	for colorid in c['colorIdentity']:
-		data_mat[i][attr_map['colorid~'+colorid]] += 1.0
-	data_mat[i][attr_map['cmc']] += c['convertedManaCost']
-	data_mat[i][attr_map['power']] += c['power']
-	data_mat[i][attr_map['toughness']] += c['toughness']
-
-
-
-print(data_mat)
+		data_mat[i][attr_map['colorid~'+colorid]] += colorid_weight
+	data_mat[i][attr_map['cmc']] += c['convertedManaCost'] * cmc_weight
+	data_mat[i][attr_map['power']] += c['power'] * pwr_tgh_weight
+	data_mat[i][attr_map['toughness']] += c['toughness'] * pwr_tgh_weight
 
 
 with open(dest_path, 'wb') as f:
