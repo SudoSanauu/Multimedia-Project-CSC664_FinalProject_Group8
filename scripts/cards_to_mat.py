@@ -26,7 +26,7 @@ colorid_weight = 0.5
 subtype_weight = 1.0
 type_weight = 1.0
 supertype_weight = 1.0
-cmc_weight = 1.0
+cmc_weight = 0.1
 pwr_tgh_weight = 1.0
 
 

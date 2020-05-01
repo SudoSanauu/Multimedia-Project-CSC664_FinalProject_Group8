@@ -42,17 +42,17 @@ for cname in set_json:
 		toughness = float(c.get("toughness"))
 
 	card_info = {
-		"colorIdentity": c.get("colorIdentity"),
-		"colors": c.get("colors"),
-		"convertedManaCost": c.get("convertedManaCost"),
-		"name": c.get("name"),
+		"colorIdentity": c.get("colorIdentity",[]),
+		"colors": c.get("colors",[]),
+		"convertedManaCost": c.get("convertedManaCost",0),
+		"name": c.get("name",""),
 		"power": power,
-		"subtypes": c.get("subtypes"),
-		"supertypes": c.get("supertypes"),
-		"text": c.get("text"),
+		"subtypes": c.get("subtypes",[]),
+		"supertypes": c.get("supertypes",[]),
+		"text": c.get("text",""),
 		"toughness": toughness,
 		"type": c.get("type"),
-		"types": c.get("types")
+		"types": c.get("types",[])
 	}
 	parsedCards.append(card_info)
 
