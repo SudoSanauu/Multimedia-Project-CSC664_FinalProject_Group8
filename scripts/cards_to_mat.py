@@ -48,7 +48,8 @@ supertype_set = set()
 print("preprocessing ",len(cards), " cards...")
 for c in cards:
 	# right now unigrams, maybe change latter
-	ngrams = tp.rules_tokenize(c)
+	tokens = tp.rules_tokenize(c)
+	ngrams = tp.token_to_ngrams(tokens,3)
 
 	for ng in set(ngrams):
 		insert_incr_dict(ngram_doc_freq,ng)
