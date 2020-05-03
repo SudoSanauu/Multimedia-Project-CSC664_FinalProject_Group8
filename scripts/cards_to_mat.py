@@ -19,14 +19,17 @@ with open(card_path, 'r') as f:
 # Constant declaration
 color_arr = ['W','U','B','R','G']
 
-# weight for each element in the matrix
-ngram_weight = 1.0
+# what ngram values to use
+ngram_vals = [1,3]
+
+# weight for each feature/type of feature in the matrix
+ngram_weights = [0.4, 0.6]
 color_wieght = 0.5
 colorid_weight = 0.5
 subtype_weight = 1.0
 type_weight = 1.0
 supertype_weight = 1.0
-cmc_weight = 0.1
+cmc_weight = 0.2
 pwr_tgh_weight = 1.0
 
 
@@ -47,12 +50,20 @@ supertype_set = set()
 # Loop 1 is to do all the text preprocessing and set up the matrix
 print("preprocessing ",len(cards), " cards...")
 for c in cards:
-	# right now unigrams, maybe change latter
 	tokens = tp.rules_tokenize(c)
-	ngrams = tp.token_to_ngrams(tokens,3)
+	finalNgrams = []
 
-	for ng in set(ngrams):
-		insert_incr_dict(ngram_doc_freq,ng)
+	# make multiple ngrams, each with a prefix of %n
+	for n in ngram_vals:
+		ngrams = tp.token_to_ngrams(tokens, n)
+
+		# will be saved as '%n(gram1,gram2...gramn)'
+		ngrams = list(map(lambda x: '%' + str(n) + x, ngrams))
+		finalNgrams.append(ngrams)
+
+		for ng in set(ngrams):
+			insert_incr_dict(ngram_doc_freq, ng)
+	
 	for subty in c['subtypes']:
 		subtype_set.add(subty)
 	for ty in c['types']:
@@ -61,7 +72,8 @@ for c in cards:
 		supertype_set.add(supty)
 
 	# Store ngrams in card dict so you don't have to remake it
-	c['ngrams'] = ngrams
+	# this will be a list of lists
+	c['ngrams'] = finalNgrams
 
 
 # Now we will construct the matrix:
@@ -79,7 +91,7 @@ print('supertype: ', len(supertype_set))
 
 print("creating data_mat...")
 data_mat = np.zeros((num_rows, num_cols))
-card_names = [0]*(len(cards))
+card_names = [""]*(len(cards))
 attr_map = {} # Map of attr name -> matrix col
 
 # Now for the loops where we set attr_map
@@ -110,32 +122,41 @@ attr_map['toughness'] = curr_col
 curr_col += 1
 
 
-
+print('populating feature matrix...')
 # Now to populate the matrix and label the names
 for i in range(0,len(cards)):
 	c = cards[i]
 	card_names[i] = c['name']
 
-	for ng in c['ngrams']:
-		data_mat[i][attr_map['ngram~'+ng]] += (ngram_weight / ngram_doc_freq[ng])
+	# for each of the lists of ngrams add them in
+	for j in range(0, len(c['ngrams'])):
+		ngrams = c['ngrams'][j]
+		for ng in ngrams:
+			data_mat[i][attr_map['ngram~'+ng]] += (ngram_weights[j] / ngram_doc_freq[ng])
+
 	for subty in c['subtypes']:
 		data_mat[i][attr_map['subty~'+subty]] += subtype_weight
+
 	for ty in c['types']:
 		data_mat[i][attr_map['ty~'+ty]] += type_weight
+	
 	for supty in c['supertypes']:
 		data_mat[i][attr_map['supty~'+supty]] += supertype_weight
+	
 	for color in c['colors']:
 		data_mat[i][attr_map['color~'+color]] += color_wieght
+	
 	for colorid in c['colorIdentity']:
 		data_mat[i][attr_map['colorid~'+colorid]] += colorid_weight
+	
 	data_mat[i][attr_map['cmc']] += c['convertedManaCost'] * cmc_weight
 	data_mat[i][attr_map['power']] += c['power'] * pwr_tgh_weight
 	data_mat[i][attr_map['toughness']] += c['toughness'] * pwr_tgh_weight
 
-
+print("saving data to ", dest_path, " ...")
 with open(dest_path, 'wb') as f:
 	np.savez(f, data_mat=data_mat, card_names=np.array(card_names), attr_map=np.array(list(attr_map.items())))
 
-
+print("finished successfully")
 
 
