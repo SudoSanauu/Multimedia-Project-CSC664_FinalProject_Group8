@@ -24,6 +24,12 @@ hand_weights_17 = np.matrix([
 	[6.00, 9.00, 9.00, 9.00, 6.00, 3.75, 9.00, 8.00, 6.00, 6.00, 8.00, 8.50, 8.00, 8.50, 6.50, 7.00, 0.00]
 	])
 
+# helper function for dictionary insertion
+def insert_incr_dict(inDict, token):
+	if token in inDict:
+		inDict[token] += 1
+	else:
+		 inDict[token] = 1
 
 
 # take in a list of cards (dicts), and the ngrams to each card
@@ -43,5 +49,40 @@ def add_ngrams(card_list, ngram_vals):
 		# put that list in the card
 		c['ngrams'] = ngrams
 		c['ngramVals'] = ngram_vals
+		# NOTE: a better api would be to have an ngram dictionary with elements
+		# key=n and value=ngs for each n.
 
-# def generate_mat_sets
+def generate_mat_features(card_list):
+	ngram_doc_freq = {}
+	subtype_set = set()
+	type_set = set()
+	supertype_set = set()
+
+
+	for c in card_list:
+		for i in range(0, len(c['ngramVals'])):
+			n = c['ngramVals'][i]
+			ngrams = c['ngrams'][i]
+
+			# now insert them into doc freq dictionary
+			for ng in set(ngrams):
+				insert_incr_dict(ngram_doc_freq, ng)
+		
+		# insert the types into their sets
+		for subty in c['subtypes']:
+			subtype_set.add(subty)
+		for ty in c['types']:
+			type_set.add(ty)
+		for supty in c['supertypes']:
+			supertype_set.add(supty)
+	# compile findings into one data structure to return
+	return_dict = {
+		'ngram_doc_freq': ngram_doc_freq,
+		'subtype_set': subtype_set,
+		'type_set': type_set,
+		'supertype_set': supertype_set
+	}
+	return return_dict
+
+
+

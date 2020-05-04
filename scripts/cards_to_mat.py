@@ -34,39 +34,18 @@ cmc_weight = 0.2
 pwr_tgh_weight = 1.0
 
 
-def insert_incr_dict(inDict, token):
-	if token in inDict:
-		inDict[token] += 1
-	else:
-		 inDict[token] = 1
-
 # generate ngrams and save in card list
+print("preprocessing ",len(cards), " cards ...")
 matp.add_ngrams(cards, ngram_vals)
 
-# create sets for all the parameters we care about keeping track of
-ngram_doc_freq = {}
-subtype_set = set()
-type_set = set()
-supertype_set = set()
+print("creating feature sets ...")
+features = matp.generate_mat_features(cards)
 
-# Loop 1 is to do all the text preprocessing and set up the matrix
-print("preprocessing ",len(cards), " cards...")
-for c in cards:
-	for i in range(0, len(ngram_vals)):
-		n = ngram_vals[i]
-		ngrams = c['ngrams'][i]
-
-		# now insert them into doc freq dictionary
-		for ng in set(ngrams):
-			insert_incr_dict(ngram_doc_freq, ng)
-	
-	for subty in c['subtypes']:
-		subtype_set.add(subty)
-	for ty in c['types']:
-		type_set.add(ty)
-	for supty in c['supertypes']:
-		supertype_set.add(supty)
-
+# kind of a messy way to do this, I wonder if there's a better way...
+ngram_doc_freq = features['ngram_doc_freq']
+subtype_set = features['subtype_set']
+type_set = features['type_set']
+supertype_set = features['supertype_set']
 
 # Now we will construct the matrix:
 # num_cards by (ngramms + subtypes + 7/15(types) + 2/7(supertypes) + 5(colors) + 5(color_ids) + 1(cmc) + 1(pwr) + 1(tgh))
@@ -81,7 +60,7 @@ print('type: ', len(type_set))
 print('supertype: ', len(supertype_set))
 
 
-print("creating data_mat...")
+print("creating data_mat ...")
 data_mat = np.zeros((num_rows, num_cols))
 card_names = [""]*(len(cards))
 attr_map = {} # Map of attr name -> matrix col
