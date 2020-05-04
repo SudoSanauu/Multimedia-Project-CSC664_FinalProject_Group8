@@ -2,7 +2,7 @@ import re
 
 # declare constants & compile res
 no_reminder = re.compile("\([^)]*\)")
-no_useless = re.compile("[\.,'\"!—]")
+no_useless = re.compile("[\.,'\"!—%]")
 no_newline = re.compile("\n")
 space_colon = re.compile(":")
 split_pattern = re.compile(' ')
@@ -17,6 +17,7 @@ f_slist_fun = lambda f: not f in flavor_stoplist
 
 def rules_tokenize(card):
 	# replace cardname with @ and makes all lowercase
+	# TODO: Find a way to remove shortened legendary names too
 	new_rules = card['text'].replace(card['name'], "@").lower()
 
 	# remove all reminder text in parens
@@ -51,8 +52,13 @@ def token_to_bigram(tokens):
 	return token_to_ngrams(tokens,2)
 
 def token_to_ngrams(tokens, ngram_size):
-	# S & E are start and end tokens
-	new_tok = ['S'] + tokens + ['E']
+	# S & E are start and end tokens for n>1
+	if ngram_size > 1:
+		new_tok = ['S'] + tokens + ['E']
+	else:
+		if tokens == []:
+			return ["()"]
+		new_tok = tokens
 
 	# catch case of too small to prevent out of index errors
 	if len(new_tok) <= ngram_size:

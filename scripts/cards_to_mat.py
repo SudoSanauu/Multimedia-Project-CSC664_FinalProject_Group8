@@ -3,6 +3,7 @@ import json
 import re
 import numpy as np
 import text_processing as tp
+import mat_processing as matp
 
 
 if len(sys.argv) != 3:
@@ -39,28 +40,23 @@ def insert_incr_dict(inDict, token):
 	else:
 		 inDict[token] = 1
 
+# generate ngrams and save in card list
+matp.add_ngrams(cards, ngram_vals)
+
 # create sets for all the parameters we care about keeping track of
 ngram_doc_freq = {}
 subtype_set = set()
 type_set = set()
 supertype_set = set()
 
-
-
 # Loop 1 is to do all the text preprocessing and set up the matrix
 print("preprocessing ",len(cards), " cards...")
 for c in cards:
-	tokens = tp.rules_tokenize(c)
-	finalNgrams = []
+	for i in range(0, len(ngram_vals)):
+		n = ngram_vals[i]
+		ngrams = c['ngrams'][i]
 
-	# make multiple ngrams, each with a prefix of %n
-	for n in ngram_vals:
-		ngrams = tp.token_to_ngrams(tokens, n)
-
-		# will be saved as '%n(gram1,gram2...gramn)'
-		ngrams = list(map(lambda x: '%' + str(n) + x, ngrams))
-		finalNgrams.append(ngrams)
-
+		# now insert them into doc freq dictionary
 		for ng in set(ngrams):
 			insert_incr_dict(ngram_doc_freq, ng)
 	
@@ -70,10 +66,6 @@ for c in cards:
 		type_set.add(ty)
 	for supty in c['supertypes']:
 		supertype_set.add(supty)
-
-	# Store ngrams in card dict so you don't have to remake it
-	# this will be a list of lists
-	c['ngrams'] = finalNgrams
 
 
 # Now we will construct the matrix:
