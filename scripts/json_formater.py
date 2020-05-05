@@ -25,26 +25,26 @@ parsedCards = []
 
 for cname in set_json:
 	c = set_json[cname]
-	if 'names' in c and c['names'] != []: continue
+	if ('names' in c) and (c['names'] != []):
+		continue
 
-	if c.get("power") == "*":
+	power = c.get("power", -1.0)
+	if power == "*":
 		power = 0.0
-	elif c.get("power") is None:
-		power = -1
 	else:
-		power = float(c.get("power"))
+		power = float(power)
 
-	if c.get("toughness") == "*":
+	toughness = c.get("toughness", -1.0)
+	if toughness == "*":
 		toughness = 0.0
-	elif c.get("toughness") is None:
-		toughness = -1
 	else:
-		toughness = float(c.get("toughness"))
+		toughness = float(toughness)
 
 	card_info = {
 		"colorIdentity": c.get("colorIdentity",[]),
 		"colors": c.get("colors",[]),
 		"convertedManaCost": c.get("convertedManaCost",0),
+		"manaCost": c.get("manaCost", ""),
 		"name": c.get("name",""),
 		"power": power,
 		"subtypes": c.get("subtypes",[]),
