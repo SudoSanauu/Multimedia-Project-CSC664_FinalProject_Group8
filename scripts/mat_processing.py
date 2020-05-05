@@ -1,6 +1,11 @@
 import numpy as np
 import text_processing as tp
 
+# Lots of this should be done with classes and object eventually, I'm just doing
+# it with dictionaries for the time being because JS has poisoned my brain and
+# its faster/easier for quick iteration to start out. If I continue this project
+# and try to make the api more usable I should do that.
+
 # Constants
 color_arr = ['W','U','B','R','G']
 
@@ -76,13 +81,101 @@ def generate_mat_features(card_list):
 		for supty in c['supertypes']:
 			supertype_set.add(supty)
 	# compile findings into one data structure to return
-	return_dict = {
+	features = {
 		'ngram_doc_freq': ngram_doc_freq,
 		'subtype_set': subtype_set,
 		'type_set': type_set,
 		'supertype_set': supertype_set
 	}
-	return return_dict
+	return features
+
+def prepare_mat(features, card_list):
+	ngram_doc_freq = features['ngram_doc_freq']
+	subtype_set = features['subtype_set']
+	type_set = features['type_set']
+	supertype_set = features['supertype_set']
+
+	# Now we will construct the matrix:
+	# num_cards by (ngramms + subtypes + 7/15(types) + 2/7(supertypes) + 5(colors) + 5(color_ids) + 1(cmc) + 1(pwr) + 1(tgh))
+	num_rows = len(card_list)
+	num_cols = len(ngram_doc_freq) + len(subtype_set) + len(type_set) + len(supertype_set) + 13
+
+	# initialize matrix
+	empty_mat = np.zeros((num_rows, num_cols))
+	card_names = [""]*(len(card_list))
+	feature_map = {}
+
+	# populate col values
+	curr_col = 0
+	for ng in ngram_doc_freq.keys():
+		feature_map['ngram~'+ng] = curr_col
+		curr_col += 1
+	for subty in subtype_set:
+		feature_map['subty~'+subty] = curr_col
+		curr_col += 1
+	for ty in type_set:
+		feature_map['ty~'+ty] = curr_col
+		curr_col += 1
+	for supty in supertype_set:
+		feature_map['supty~'+supty] = curr_col
+		curr_col += 1
+	for color in color_arr:
+		feature_map['color~'+color] = curr_col
+		curr_col += 1
+	for colorid in color_arr:
+		feature_map['colorid~'+colorid] = curr_col
+		curr_col += 1
+	feature_map['cmc'] = curr_col
+	curr_col += 1
+	feature_map['power'] = curr_col
+	curr_col += 1
+	feature_map['toughness'] = curr_col
+	curr_col += 1
+
+	matrix_data = {
+		'data_mat': empty_mat,
+		'card_names': card_names,
+		'feature_map': feature_map
+	}
+	return matrix_data
+
+def populate_mat(card_list, features, matrix_data, weights):
+	data_mat = matrix_data['data_mat']
+	card_names = matrix_data['card_names']
+	feature_map = matrix_data['feature_map']
+
+	ngram_doc_freq = features['ngram_doc_freq']
+
+
+	for i in range(0,len(card_list)):
+		c = card_list[i]
+		card_names[i] = c['name']
+
+		# for each of the lists of ngrams add them in
+		for j in range(0, len(c['ngrams'])):
+			ngrams = c['ngrams'][j]
+			for ng in ngrams:
+				divisor = ngram_doc_freq[ng] if weights['ngram_idf?'] else 1.0
+				data_mat[i][feature_map['ngram~'+ng]] += (weights['ngram_weights'][j] / divisor)
+
+		for subty in c['subtypes']:
+			data_mat[i][feature_map['subty~'+subty]] += weights['subtype_weight']
+
+		for ty in c['types']:
+			data_mat[i][feature_map['ty~'+ty]] += weights['type_weight']
+		
+		for supty in c['supertypes']:
+			data_mat[i][feature_map['supty~'+supty]] += weights['supertype_weight']
+		
+		for color in c['colors']:
+			data_mat[i][feature_map['color~'+color]] += weights['color_weight']
+		
+		for colorid in c['colorIdentity']:
+			data_mat[i][feature_map['colorid~'+colorid]] += weights['colorid_weight']
+		
+		data_mat[i][feature_map['cmc']] += c['convertedManaCost'] * weights['cmc_weight']
+		data_mat[i][feature_map['power']] += c['power'] * weights['pwr_tgh_weight']
+		data_mat[i][feature_map['toughness']] += c['toughness'] * weights['pwr_tgh_weight']
 
 
 

@@ -19,13 +19,13 @@ def is_value(in_str, cards_len):
 
 data_mat = 0
 card_names = 0
-attr_map = 0
+feature_map = 0
 
 with open(src_path, 'rb') as f:
 	npy_file = np.load(f)
 	data_mat = npy_file['data_mat']
 	card_names = npy_file['card_names']
-	attr_map = npy_file['attr_map']
+	feature_map = npy_file['feature_map']
 
 
 dist_matrx = np.zeros((len(card_names),len(card_names)))
