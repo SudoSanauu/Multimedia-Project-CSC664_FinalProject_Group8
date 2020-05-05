@@ -1,6 +1,7 @@
 import sys
 import numpy as np
 import matplotlib.pyplot as plt
+import mat_processing as matp
 
 
 if len(sys.argv) != 2:
@@ -27,22 +28,17 @@ with open(src_path, 'rb') as f:
 	card_names = npy_file['card_names']
 	feature_map = npy_file['feature_map']
 
-
-dist_matrx = np.zeros((len(card_names),len(card_names)))
-
-for i in range(0,len(card_names)):
-	for j in range(i+1,len(card_names)):
-		# this is the way to find the euclidean distance between two matrices
-		dist_matrx[i][j] = dist_matrx[j][i] = np.linalg.norm(data_mat[i] - data_mat[j])
+# create distance matrix
+dist_matrx = matp.create_distance_mat(data_mat)
 
 in_str = ''
 while in_str != 'q':
 	in_str = input("Enter command (h or ? for help): ")
-	if in_str == 'c':
+	if in_str == 'c': # get list of card names and indices
 		for i in range(0,len(card_names)):
 			print(i, ": ", card_names[i])
 
-	elif is_value(in_str, len(card_names)):
+	elif is_value(in_str, len(card_names)): # print distances for one card
 		i = int(in_str)
 		print("distances for card ", i, " ", card_names[i])
 		for j in range(0,len(card_names)):
@@ -53,14 +49,14 @@ while in_str != 'q':
 		ax.bar(card_names, dist_matrx[i])
 		plt.show()
 
-	elif in_str == 'p':
+	elif in_str == 'p':  # print the distance matrix
 		for i in range(0, len(dist_matrx)):
-			print(['{:.4f}'.format(x) for x in dist_matrx[i]])	
+			print(['{:.2f}'.format(x) for x in dist_matrx[i]])	
 
 	elif in_str == 'q':
 		continue
 	# if in_str == 'h' or in_str == '?':
-	else:
+	else: # help
 		print("commands are: ")
 		print('q: quit')
 		print('h or ?: help menu')

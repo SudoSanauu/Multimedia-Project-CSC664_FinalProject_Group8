@@ -178,4 +178,13 @@ def populate_mat(card_list, features, matrix_data, weights):
 		data_mat[i][feature_map['toughness']] += c['toughness'] * weights['pwr_tgh_weight']
 
 
+def create_distance_mat(data_mat):
+	dimension = len(data_mat)
+	dist_matrx = np.zeros( (dimension,dimension) )
+	for i in range(0, dimension):
+		# we get to cheat since (n,n) = 0 and (n,m) = (m,n)
+		for j in range(i+1, dimension):
+			# this is the way to find the euclidean distance between two matrices
+			dist_matrx[i][j] = dist_matrx[j][i] = np.linalg.norm(data_mat[i] - data_mat[j])
+	return dist_matrx
 
