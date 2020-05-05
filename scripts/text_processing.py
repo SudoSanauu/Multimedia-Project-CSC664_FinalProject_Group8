@@ -6,13 +6,13 @@ no_useless = re.compile("[\.,'\"!—%]")
 no_newline = re.compile("\n")
 space_colon = re.compile(":")
 split_pattern = re.compile(' ')
+mana_split = re.compile('\}\{')
 
 rules_stoplist = ['the', 'of', '', 'with']
 r_slist_fun = lambda f: not f in rules_stoplist
 
 flavor_stoplist = ['the', '', 'a', 'to', 'an', 'it', 'its']
 f_slist_fun = lambda f: not f in flavor_stoplist
-
 
 
 def rules_tokenize(card):
@@ -48,6 +48,24 @@ def flavor_tokenize(card):
 	# split tokens and remove stop words
 	return list(filter(f_slist_fun, split_pattern.split(new_flavor)))
 
+def manacost_tokenize(card):
+	mc = card['manaCost']
+	if mc == '':
+		return []
+
+	# since manacost appears as '{a}{b}...{c}' removing 1st & last brace and then
+	# splitting on }{ separates all the tokens 
+	return mana_split.split(mc[1:-1])
+
+
+def is_num(in_str):
+	try:
+		x = float(in_str)
+		return True
+	except ValueError:
+		return False
+
+
 def token_to_bigram(tokens):
 	return token_to_ngrams(tokens,2)
 
@@ -72,3 +90,4 @@ def token_to_ngrams(tokens, ngram_size):
 		ngram = ','.join( new_tok[i:(i+ngram_size)] )
 		outlist[i] = '(' + ngram + ')'
 	return outlist	
+

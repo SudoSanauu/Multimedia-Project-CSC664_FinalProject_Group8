@@ -29,13 +29,14 @@ weights = {
 	'subtype_weight': 1.0,
 	'type_weight': 1.0,
 	'supertype_weight': 1.0,
-	'cmc_weight': 0.2,
+	'cmc_weight': 0.1,
+	'mana_cost_weight': 0.1,
 	'pwr_tgh_weight': 1.0
 }
 
 # generate ngrams and save in card list
 print("preprocessing ",len(cards), " cards ...")
-matp.add_ngrams(cards, ngram_vals)
+matp.add_features(cards, ngram_vals)
 
 print("creating feature sets ...")
 features = matp.generate_mat_features(cards)
@@ -45,6 +46,7 @@ matrix_data = matp.prepare_mat(features, cards)
 
 print('data_mat: ', len(matrix_data['data_mat']), " x ", len(matrix_data['data_mat'][0]))
 print('ngram: ', len(features['ngram_doc_freq']))
+print('manacosts: ', 1 + len(features['manacost_set']))
 print('subtype: ', len(features['subtype_set']))
 print('type: ', len(features['type_set']))
 print('supertype: ', len(features['supertype_set']))

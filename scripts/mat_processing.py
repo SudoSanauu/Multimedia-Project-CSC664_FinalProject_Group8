@@ -38,7 +38,7 @@ def insert_incr_dict(inDict, token):
 
 
 # take in a list of cards (dicts), and the ngrams to each card
-def add_ngrams(card_list, ngram_vals):
+def add_features(card_list, ngram_vals):
 	for c in card_list:
 		tokens = tp.rules_tokenize(c)
 		ngrams = []
@@ -51,9 +51,12 @@ def add_ngrams(card_list, ngram_vals):
 			# append those ngs to the master list
 			ngrams.append(ngs)
 
+		manacost_tkns = tp.manacost_tokenize(c)
+
 		# put that list in the card
 		c['ngrams'] = ngrams
 		c['ngramVals'] = ngram_vals
+		c['manaCostTkns'] = manacost_tkns
 		# NOTE: a better api would be to have an ngram dictionary with elements
 		# key=n and value=ngs for each n.
 
@@ -62,6 +65,7 @@ def generate_mat_features(card_list):
 	subtype_set = set()
 	type_set = set()
 	supertype_set = set()
+	manacost_set = set()
 
 
 	for c in card_list:
@@ -72,7 +76,8 @@ def generate_mat_features(card_list):
 			# now insert them into doc freq dictionary
 			for ng in set(ngrams):
 				insert_incr_dict(ngram_doc_freq, ng)
-		
+
+
 		# insert the types into their sets
 		for subty in c['subtypes']:
 			subtype_set.add(subty)
@@ -80,25 +85,36 @@ def generate_mat_features(card_list):
 			type_set.add(ty)
 		for supty in c['supertypes']:
 			supertype_set.add(supty)
+		for mc in set(c['manaCostTkns']):
+			if not tp.is_num(mc):
+				manacost_set.add(mc)
+
 	# compile findings into one data structure to return
 	features = {
 		'ngram_doc_freq': ngram_doc_freq,
 		'subtype_set': subtype_set,
 		'type_set': type_set,
-		'supertype_set': supertype_set
+		'supertype_set': supertype_set,
+		'manacost_set': manacost_set
 	}
 	return features
 
 def prepare_mat(features, card_list):
+	# this is still really ugly but keeps my variables names just too long
+	# instead of way too long
 	ngram_doc_freq = features['ngram_doc_freq']
 	subtype_set = features['subtype_set']
 	type_set = features['type_set']
 	supertype_set = features['supertype_set']
+	manacost_set = features['manacost_set']
 
 	# Now we will construct the matrix:
-	# num_cards by (ngramms + subtypes + 7/15(types) + 2/7(supertypes) + 5(colors) + 5(color_ids) + 1(cmc) + 1(pwr) + 1(tgh))
+	# num_cards by (ngramms + subtypes + 7/15(types) + 2/7(supertypes) +
+	# 5(colors) + 5(color_ids) + 6/22(mana tokens) + 1(cmc) + 1(pwr) + 1(tgh))
 	num_rows = len(card_list)
-	num_cols = len(ngram_doc_freq) + len(subtype_set) + len(type_set) + len(supertype_set) + 13
+	## TODO add manacost tokens
+	num_cols = len(ngram_doc_freq) + len(subtype_set) + len(type_set) + \
+		len(supertype_set) + (len(manacost_set) + 1) + 13
 
 	# initialize matrix
 	empty_mat = np.zeros((num_rows, num_cols))
@@ -124,6 +140,13 @@ def prepare_mat(features, card_list):
 		curr_col += 1
 	for colorid in color_arr:
 		feature_map['colorid~'+colorid] = curr_col
+		curr_col += 1
+	# This is the int generic mana cost
+	feature_map['manacost~#'] = curr_col
+	curr_col +=1
+	# this is all the tokens
+	for mc in manacost_set:
+		feature_map['manacost~'+mc] = curr_col
 		curr_col += 1
 	feature_map['cmc'] = curr_col
 	curr_col += 1
@@ -172,6 +195,12 @@ def populate_mat(card_list, features, matrix_data, weights):
 		
 		for colorid in c['colorIdentity']:
 			data_mat[i][feature_map['colorid~'+colorid]] += weights['colorid_weight']
+
+		for mc in c['manaCostTkns']:
+			if tp.is_num(mc):
+				data_mat[i][feature_map['manacost~#']] += weights['mana_cost_weight'] * float(mc)
+			else:
+				data_mat[i][feature_map['manacost~'+mc]] += weights['mana_cost_weight']
 		
 		data_mat[i][feature_map['cmc']] += c['convertedManaCost'] * weights['cmc_weight']
 		data_mat[i][feature_map['power']] += c['power'] * weights['pwr_tgh_weight']
