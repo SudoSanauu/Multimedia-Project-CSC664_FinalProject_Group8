@@ -188,3 +188,5 @@ def create_distance_mat(data_mat):
 			dist_matrx[i][j] = dist_matrx[j][i] = np.linalg.norm(data_mat[i] - data_mat[j])
 	return dist_matrx
 
+def dist_mat_diff(dist_mat1, dist_mat2=hand_weights_17):
+	return np.sum( np.absolute(dist_mat1 - dist_mat2) )
