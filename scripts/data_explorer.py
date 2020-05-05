@@ -26,10 +26,10 @@ with open(src_path, 'rb') as f:
 	npy_file = np.load(f)
 	data_mat = npy_file['data_mat']
 	card_names = npy_file['card_names']
-	
+
 	# the joys of renaming variables to things which make more sense
 	feature_map = npy_file.get('feature_map')
-	if feature_map == None:
+	if not isinstance(feature_map, np.ndarray):
 		feature_map = npy_file.get('attr_map')
 
 # create distance matrix
