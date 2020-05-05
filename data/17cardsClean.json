@@ -1,0 +1,379 @@
+[
+  {
+    "colorIdentity": [
+      "U"
+    ],
+    "colors": [
+      "U"
+    ],
+    "convertedManaCost": 3.0,
+    "manaCost": "{1}{U}{U}",
+    "name": "Aether Adept",
+    "power": 2.0,
+    "subtypes": [
+      "Human",
+      "Wizard"
+    ],
+    "supertypes": [],
+    "text": "When Aether Adept enters the battlefield, return target creature to its owner's hand.",
+    "toughness": 2.0,
+    "type": "Creature — Human Wizard",
+    "types": [
+      "Creature"
+    ]
+  },
+  {
+    "colorIdentity": [
+      "B"
+    ],
+    "colors": [
+      "B"
+    ],
+    "convertedManaCost": 4.0,
+    "manaCost": "{3}{B}",
+    "name": "Agonizing Syphon",
+    "power": -1.0,
+    "subtypes": [],
+    "supertypes": [],
+    "text": "Agonizing Syphon deals 3 damage to any target and you gain 3 life.",
+    "toughness": -1.0,
+    "type": "Sorcery",
+    "types": [
+      "Sorcery"
+    ]
+  },
+  {
+    "colorIdentity": [
+      "U"
+    ],
+    "colors": [
+      "U"
+    ],
+    "convertedManaCost": 3.0,
+    "manaCost": "{2}{U}",
+    "name": "Arrester's Admonition",
+    "power": -1.0,
+    "subtypes": [],
+    "supertypes": [],
+    "text": "Return target creature to its owner's hand.\nAddendum — If you cast this spell during your main phase, draw a card.",
+    "toughness": -1.0,
+    "type": "Instant",
+    "types": [
+      "Instant"
+    ]
+  },
+  {
+    "colorIdentity": [
+      "U"
+    ],
+    "colors": [
+      "U"
+    ],
+    "convertedManaCost": 3.0,
+    "manaCost": "{2}{U}",
+    "name": "Code of Constraint",
+    "power": -1.0,
+    "subtypes": [],
+    "supertypes": [],
+    "text": "Target creature gets -4/-0 until end of turn.\nDraw a card.\nAddendum — If you cast this spell during your main phase, tap that creature and it doesn't untap during its controller's next untap step.",
+    "toughness": -1.0,
+    "type": "Instant",
+    "types": [
+      "Instant"
+    ]
+  },
+  {
+    "colorIdentity": [
+      "U"
+    ],
+    "colors": [
+      "U"
+    ],
+    "convertedManaCost": 3.0,
+    "manaCost": "{2}{U}",
+    "name": "Exclusion Mage",
+    "power": 2.0,
+    "subtypes": [
+      "Human",
+      "Wizard"
+    ],
+    "supertypes": [],
+    "text": "When Exclusion Mage enters the battlefield, return target creature an opponent controls to its owner's hand.",
+    "toughness": 2.0,
+    "type": "Creature — Human Wizard",
+    "types": [
+      "Creature"
+    ]
+  },
+  {
+    "colorIdentity": [
+      "R",
+      "W"
+    ],
+    "colors": [
+      "R",
+      "W"
+    ],
+    "convertedManaCost": 4.0,
+    "manaCost": "{2}{R}{W}",
+    "name": "Firemane Avenger",
+    "power": 3.0,
+    "subtypes": [
+      "Angel"
+    ],
+    "supertypes": [],
+    "text": "Flying\nBattalion — Whenever Firemane Avenger and at least two other creatures attack, Firemane Avenger deals 3 damage to any target and you gain 3 life.",
+    "toughness": 3.0,
+    "type": "Creature — Angel",
+    "types": [
+      "Creature"
+    ]
+  },
+  {
+    "colorIdentity": [
+      "U"
+    ],
+    "colors": [
+      "U"
+    ],
+    "convertedManaCost": 2.0,
+    "manaCost": "{1}{U}",
+    "name": "Impulse",
+    "power": -1.0,
+    "subtypes": [],
+    "supertypes": [],
+    "text": "Look at the top four cards of your library. Put one of them into your hand and the rest on the bottom of your library in any order.",
+    "toughness": -1.0,
+    "type": "Instant",
+    "types": [
+      "Instant"
+    ]
+  },
+  {
+    "colorIdentity": [
+      "R"
+    ],
+    "colors": [
+      "R"
+    ],
+    "convertedManaCost": 1.0,
+    "manaCost": "{R}",
+    "name": "Lightning Bolt",
+    "power": -1.0,
+    "subtypes": [],
+    "supertypes": [],
+    "text": "Lightning Bolt deals 3 damage to any target.",
+    "toughness": -1.0,
+    "type": "Instant",
+    "types": [
+      "Instant"
+    ]
+  },
+  {
+    "colorIdentity": [
+      "R",
+      "W"
+    ],
+    "colors": [
+      "R",
+      "W"
+    ],
+    "convertedManaCost": 2.0,
+    "manaCost": "{R}{W}",
+    "name": "Lightning Helix",
+    "power": -1.0,
+    "subtypes": [],
+    "supertypes": [],
+    "text": "Lightning Helix deals 3 damage to any target and you gain 3 life.",
+    "toughness": -1.0,
+    "type": "Instant",
+    "types": [
+      "Instant"
+    ]
+  },
+  {
+    "colorIdentity": [
+      "U"
+    ],
+    "colors": [
+      "U"
+    ],
+    "convertedManaCost": 3.0,
+    "manaCost": "{2}{U}",
+    "name": "Man-o'-War",
+    "power": 2.0,
+    "subtypes": [
+      "Jellyfish"
+    ],
+    "supertypes": [],
+    "text": "When Man-o'-War enters the battlefield, return target creature to its owner's hand.",
+    "toughness": 2.0,
+    "type": "Creature — Jellyfish",
+    "types": [
+      "Creature"
+    ]
+  },
+  {
+    "colorIdentity": [
+      "R"
+    ],
+    "colors": [
+      "R"
+    ],
+    "convertedManaCost": 2.0,
+    "manaCost": "{1}{R}",
+    "name": "Oath of Chandra",
+    "power": -1.0,
+    "subtypes": [],
+    "supertypes": [
+      "Legendary"
+    ],
+    "text": "When Oath of Chandra enters the battlefield, it deals 3 damage to target creature an opponent controls.\nAt the beginning of each end step, if a planeswalker entered the battlefield under your control this turn, Oath of Chandra deals 2 damage to each opponent.",
+    "toughness": -1.0,
+    "type": "Legendary Enchantment",
+    "types": [
+      "Enchantment"
+    ]
+  },
+  {
+    "colorIdentity": [
+      "U"
+    ],
+    "colors": [
+      "U"
+    ],
+    "convertedManaCost": 3.0,
+    "manaCost": "{2}{U}",
+    "name": "Oath of Jace",
+    "power": -1.0,
+    "subtypes": [],
+    "supertypes": [
+      "Legendary"
+    ],
+    "text": "When Oath of Jace enters the battlefield, draw three cards, then discard two cards.\nAt the beginning of your upkeep, scry X, where X is the number of planeswalkers you control.",
+    "toughness": -1.0,
+    "type": "Legendary Enchantment",
+    "types": [
+      "Enchantment"
+    ]
+  },
+  {
+    "colorIdentity": [
+      "B",
+      "W"
+    ],
+    "colors": [
+      "B",
+      "W"
+    ],
+    "convertedManaCost": 3.0,
+    "manaCost": "{1}{W}{B}",
+    "name": "Oath of Kaya",
+    "power": -1.0,
+    "subtypes": [],
+    "supertypes": [
+      "Legendary"
+    ],
+    "text": "When Oath of Kaya enters the battlefield, it deals 3 damage to any target and you gain 3 life.\nWhenever an opponent attacks a planeswalker you control with one or more creatures, Oath of Kaya deals 2 damage to that player and you gain 2 life.",
+    "toughness": -1.0,
+    "type": "Legendary Enchantment",
+    "types": [
+      "Enchantment"
+    ]
+  },
+  {
+    "colorIdentity": [
+      "G"
+    ],
+    "colors": [
+      "G"
+    ],
+    "convertedManaCost": 1.0,
+    "manaCost": "{G}",
+    "name": "Oath of Nissa",
+    "power": -1.0,
+    "subtypes": [],
+    "supertypes": [
+      "Legendary"
+    ],
+    "text": "When Oath of Nissa enters the battlefield, look at the top three cards of your library. You may reveal a creature, land, or planeswalker card from among them and put it into your hand. Put the rest on the bottom of your library in any order.\nYou may spend mana as though it were mana of any color to cast planeswalker spells.",
+    "toughness": -1.0,
+    "type": "Legendary Enchantment",
+    "types": [
+      "Enchantment"
+    ]
+  },
+  {
+    "colorIdentity": [
+      "U",
+      "W"
+    ],
+    "colors": [
+      "U",
+      "W"
+    ],
+    "convertedManaCost": 4.0,
+    "manaCost": "{2}{W}{U}",
+    "name": "Skymark Roc",
+    "power": 3.0,
+    "subtypes": [
+      "Bird"
+    ],
+    "supertypes": [],
+    "text": "Flying\nWhenever Skymark Roc attacks, you may return target creature defending player controls with toughness 2 or less to its owner's hand.",
+    "toughness": 3.0,
+    "type": "Creature — Bird",
+    "types": [
+      "Creature"
+    ]
+  },
+  {
+    "colorIdentity": [
+      "B",
+      "R",
+      "W"
+    ],
+    "colors": [
+      "B"
+    ],
+    "convertedManaCost": 4.0,
+    "manaCost": "{3}{B}",
+    "name": "Smiting Helix",
+    "power": -1.0,
+    "subtypes": [],
+    "supertypes": [],
+    "text": "Smiting Helix deals 3 damage to any target and you gain 3 life.\nFlashback {R}{W} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+    "toughness": -1.0,
+    "type": "Sorcery",
+    "types": [
+      "Sorcery"
+    ]
+  },
+  {
+    "colorIdentity": [
+      "R",
+      "W"
+    ],
+    "colors": [
+      "R",
+      "W"
+    ],
+    "convertedManaCost": 4.0,
+    "manaCost": "{2}{R}{W}",
+    "name": "Tajic, Blade of the Legion",
+    "power": 2.0,
+    "subtypes": [
+      "Human",
+      "Soldier"
+    ],
+    "supertypes": [
+      "Legendary"
+    ],
+    "text": "Indestructible\nBattalion — Whenever Tajic, Blade of the Legion and at least two other creatures attack, Tajic gets +5/+5 until end of turn.",
+    "toughness": 2.0,
+    "type": "Legendary Creature — Human Soldier",
+    "types": [
+      "Creature"
+    ]
+  }
+]

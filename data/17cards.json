@@ -1,0 +1,1486 @@
+{
+  "Aether Adept": {
+    "colorIdentity": [
+      "U"
+    ],
+    "colors": [
+      "U"
+    ],
+    "convertedManaCost": 3.0,
+    "edhrecRank": 3552,
+    "foreignData": [
+      {
+        "flavorText": "「宇宙は私の楽器で、私がそこから奏でる歌は、あなたが聞くことを許されない歌です。」",
+        "language": "Japanese",
+        "name": "霊気の達人",
+        "text": "霊気の達人が戦場に出たとき、クリーチャー１体を対象とし、それをオーナーの手札に戻す。",
+        "type": "クリーチャー — 人間・ウィザード"
+      }
+    ],
+    "layout": "normal",
+    "legalities": {
+      "commander": "Legal",
+      "duel": "Legal",
+      "legacy": "Legal",
+      "modern": "Legal",
+      "pauper": "Legal",
+      "vintage": "Legal"
+    },
+    "manaCost": "{1}{U}{U}",
+    "mtgoFoilId": 52406,
+    "mtgoId": 52405,
+    "name": "Aether Adept",
+    "power": "2",
+    "printings": [
+      "DDM",
+      "M11",
+      "M12"
+    ],
+    "purchaseUrls": {
+      "cardmarket": "https://mtgjson.com/links/30dbaa31ef44e8ce",
+      "tcgplayer": "https://mtgjson.com/links/fdbbf2b523600a73"
+    },
+    "rulings": [
+      {
+        "date": "2010-08-15",
+        "text": "If there are no other creatures on the battlefield when Aether Adept enters the battlefield, it must target itself."
+      }
+    ],
+    "scryfallOracleId": "e076067c-77b7-4a37-a62d-51434392dd53",
+    "subtypes": [
+      "Human",
+      "Wizard"
+    ],
+    "supertypes": [],
+    "text": "When Aether Adept enters the battlefield, return target creature to its owner's hand.",
+    "toughness": "2",
+    "type": "Creature — Human Wizard",
+    "types": [
+      "Creature"
+    ],
+    "uuid": "dbcab2f5-a8f0-5e02-926a-6eadb90e81ae"
+  },
+  "Agonizing Syphon": {
+    "colorIdentity": [
+      "B"
+    ],
+    "colors": [
+      "B"
+    ],
+    "convertedManaCost": 4.0,
+    "edhrecRank": 12674,
+    "foreignData": [
+      {
+        "flavorText": "„Dein Todeskampf wird nur einen Augenblick dauern, aber es wird sich wie eine Ewigkeit anfühlen.\"\n—Vilis, Makler des Blutes",
+        "language": "German",
+        "name": "Schmerzvolles Absaugen",
+        "text": "Das Schmerzvolle Absaugen fügt einem Ziel deiner Wahl 3 Schadenspunkte zu und du erhältst 3 Lebenspunkte dazu.",
+        "type": "Hexerei"
+      },
+      {
+        "flavorText": "\"Tu muerte será apenas un momento, pero te parecerá una eternidad\".\n—Vilis, especulador de sangre",
+        "language": "Spanish",
+        "name": "Extracción agonizante",
+        "text": "La Extracción agonizante hace 3 puntos de daño a cualquier objetivo y tú ganas 3 vidas.",
+        "type": "Conjuro"
+      },
+      {
+        "flavorText": "« Votre mort ne durera qu'un court instant, mais il vous semblera une éternité. »\n—Vilis, courtier de sang",
+        "language": "French",
+        "name": "Siphon d'agonie",
+        "text": "Le Siphon d'agonie inflige 3 blessures à n'importe quelle cible et vous gagnez 3 points de vie.",
+        "type": "Rituel"
+      },
+      {
+        "flavorText": "\"La tua morte non durerà che un istante, ma sembrerà un'eternità.\"\n—Vilis, Intermediario di Sangue",
+        "language": "Italian",
+        "name": "Assorbimento Straziante",
+        "text": "L'Assorbimento Straziante infligge 3 danni a un qualsiasi bersaglio e tu guadagni 3 punti vita.",
+        "type": "Stregoneria"
+      },
+      {
+        "flavorText": "「お前の死はほんの一瞬だが、永遠の時間に感じることだろう。」\n――血の取引者、ヴィリス",
+        "language": "Japanese",
+        "name": "苦しめる吸引",
+        "text": "クリーチャー１体かプレインズウォーカー１体かプレイヤー１人を対象とする。苦しめる吸引はそれに３点のダメージを与え、あなたは３点のライフを得る。",
+        "type": "ソーサリー"
+      },
+      {
+        "flavorText": "\"네 죽음은 한 순간일 뿐이지만, 영원처럼 느껴질 것이다.\"\n—피 중개인, 빌리스",
+        "language": "Korean",
+        "name": "고통스러운 흡수",
+        "text": "원하는 목표를 정한다. 고통스러운 흡수는 그 목표에게 피해 3점을 입히고 당신은 생명 3점을 얻는다.",
+        "type": "집중마법"
+      },
+      {
+        "flavorText": "\"Sua morte vai levar só um instante, mas vai parecer uma eternidade.\"\n— Vilis, Negociante de Sangue",
+        "language": "Portuguese (Brazil)",
+        "name": "Sifão Agonizante",
+        "text": "Sifão Agonizante causa 3 pontos de dano a qualquer alvo e você ganha 3 pontos de vida.",
+        "type": "Feitiço"
+      },
+      {
+        "flavorText": "«Твоя смерть займет лишь мгновение, но тебе оно покажется вечностью».\n— Вилис, Кровавый Негоциант",
+        "language": "Russian",
+        "name": "Мучительное Иссушение",
+        "text": "Мучительное Иссушение наносит 3 повреждения любой цели, а вы получаете 3 жизни.",
+        "type": "Волшебство"
+      },
+      {
+        "flavorText": "「虽然夺命实际只需一瞬间，但之前的苦痛会让你觉得要一辈子。」\n～鲜血掮客维利司",
+        "language": "Chinese Simplified",
+        "name": "苦痛吸魂",
+        "text": "苦痛吸魂对任意一个目标造成3点伤害，且你获得3点生命。",
+        "type": "法术"
+      },
+      {
+        "flavorText": "「雖然奪命實際只需一瞬間，但之前的苦痛會讓你覺得要一輩子。」\n～鮮血掮客維利司",
+        "language": "Chinese Traditional",
+        "name": "苦痛吸魂",
+        "text": "苦痛吸魂對任意一個目標造成3點傷害，且你獲得3點生命。",
+        "type": "巫術"
+      }
+    ],
+    "layout": "normal",
+    "legalities": {
+      "brawl": "Legal",
+      "commander": "Legal",
+      "duel": "Legal",
+      "future": "Legal",
+      "historic": "Legal",
+      "legacy": "Legal",
+      "modern": "Legal",
+      "pauper": "Legal",
+      "penny": "Legal",
+      "pioneer": "Legal",
+      "standard": "Legal",
+      "vintage": "Legal"
+    },
+    "manaCost": "{3}{B}",
+    "mtgArenaId": 69868,
+    "mtgoId": 73065,
+    "name": "Agonizing Syphon",
+    "printings": [
+      "M20"
+    ],
+    "purchaseUrls": {
+      "cardmarket": "https://mtgjson.com/links/3f6dd2a94da0644b",
+      "tcgplayer": "https://mtgjson.com/links/4e0ceec1dee44615"
+    },
+    "rulings": [
+      {
+        "date": "2019-07-12",
+        "text": "If the chosen target becomes an illegal target for Agonizing Syphon, the spell won’t resolve. You won’t gain life."
+      }
+    ],
+    "scryfallOracleId": "11669fe5-9298-4e1a-a4f7-6a4598dbc8dd",
+    "subtypes": [],
+    "supertypes": [],
+    "text": "Agonizing Syphon deals 3 damage to any target and you gain 3 life.",
+    "type": "Sorcery",
+    "types": [
+      "Sorcery"
+    ],
+    "uuid": "a3213f17-f973-5564-8a93-e39bdd757c20"
+  },
+  "Arrester's Admonition": {
+    "colorIdentity": [
+      "U"
+    ],
+    "colors": [
+      "U"
+    ],
+    "convertedManaCost": 3.0,
+    "edhrecRank": 10450,
+    "foreignData": [
+      {
+        "flavorText": "Gesetze sind die Stimme der Vernunft.",
+        "language": "German",
+        "name": "Warnung des Ordnungshüters",
+        "text": "Bringe eine Kreatur deiner Wahl auf die Hand ihres Besitzers zurück.\nAddendum — Falls du diesen Zauberspruch in deiner Hauptphase gewirkt hast, ziehe eine Karte.",
+        "type": "Spontanzauber"
+      },
+      {
+        "flavorText": "La ley es la voz de la razón.",
+        "language": "Spanish",
+        "name": "Amonestación legal",
+        "text": "Regresa la criatura objetivo a la mano de su propietario.\nAdenda — Si lanzas este hechizo durante tu fase principal, roba una carta.",
+        "type": "Instantáneo"
+      },
+      {
+        "flavorText": "La loi est la voix de la raison.",
+        "language": "French",
+        "name": "Admonition du courtier",
+        "text": "Renvoyez la créature ciblée dans la main de son propriétaire.\nAddenda — Si vous avez lancé ce sort pendant votre phase principale, piochez une carte.",
+        "type": "Éphémère"
+      },
+      {
+        "flavorText": "La legge è la voce della ragione.",
+        "language": "Italian",
+        "name": "Ammonimento dell'Agente di Polizia",
+        "text": "Fai tornare una creatura bersaglio in mano al suo proprietario.\nAppendice — Se hai lanciato questa magia durante la tua fase principale, pesca una carta.",
+        "type": "Istantaneo"
+      },
+      {
+        "flavorText": "法は根拠の声だ。",
+        "language": "Japanese",
+        "name": "拘引者の忠告",
+        "text": "クリーチャー１体を対象とし、それをオーナーの手札に戻す。\n附則 ― あなたがこの呪文をあなたのメイン・フェイズ中に唱えていたなら、カードを１枚引く。",
+        "type": "インスタント"
+      },
+      {
+        "flavorText": "법은 이성의 목소리다.",
+        "language": "Korean",
+        "name": "체포원의 책망",
+        "text": "생물을 목표로 정한다. 그 생물을 소유자의 손으로 되돌린다.\n부록 — 당신이 이 주문을 당신의 본단계에 발동했다면, 카드 한 장을 뽑는다.",
+        "type": "순간마법"
+      },
+      {
+        "flavorText": "A lei é a voz da razão.",
+        "language": "Portuguese (Brazil)",
+        "name": "Admonição do Encarcerador",
+        "text": "Devolva a criatura alvo para a mão de seu dono.\nAdendo — Se você conjurou esta mágica durante sua fase principal, compre um card.",
+        "type": "Mágica Instantânea"
+      },
+      {
+        "flavorText": "Закон — это голос разума.",
+        "language": "Russian",
+        "name": "Замечание Задержателя",
+        "text": "Верните целевое существо в руку его владельца.\nПриложение — Если вы разыграли это заклинание во время вашей главной фазы, возьмите карту.",
+        "type": "Мгновенное заклинание"
+      },
+      {
+        "flavorText": "法律是理性之声。",
+        "language": "Chinese Simplified",
+        "name": "逮捕人的训诫",
+        "text": "将目标生物移回其拥有者手上。\n附案～如果你是在你的行动阶段施放此咒语，则抓一张牌。",
+        "type": "瞬间"
+      },
+      {
+        "flavorText": "法律是理性之聲。",
+        "language": "Chinese Traditional",
+        "name": "逮捕人的訓誡",
+        "text": "將目標生物移回其擁有者手上。\n附案～如果你是在你的行動階段施放此咒語，則抽一張牌。",
+        "type": "瞬間"
+      }
+    ],
+    "layout": "normal",
+    "legalities": {
+      "brawl": "Legal",
+      "commander": "Legal",
+      "duel": "Legal",
+      "future": "Legal",
+      "historic": "Legal",
+      "legacy": "Legal",
+      "modern": "Legal",
+      "pauper": "Legal",
+      "penny": "Legal",
+      "pioneer": "Legal",
+      "standard": "Legal",
+      "vintage": "Legal"
+    },
+    "manaCost": "{2}{U}",
+    "mtgArenaId": 69159,
+    "mtgoId": 71062,
+    "name": "Arrester's Admonition",
+    "printings": [
+      "RNA"
+    ],
+    "purchaseUrls": {
+      "cardmarket": "https://mtgjson.com/links/45a97fb4fc27f105",
+      "tcgplayer": "https://mtgjson.com/links/ead77bdb9efc6fb8"
+    },
+    "rulings": [
+      {
+        "date": "2019-01-25",
+        "text": "If the target creature is an illegal target by the time Arrester’s Admonition tries to resolve, the spell doesn’t resolve. You don’t draw a card if you cast it during your main phase."
+      },
+      {
+        "date": "2019-01-25",
+        "text": "Addendum abilities of instant spells apply while the spell is resolving, not immediately after casting it. If the spell is countered, you don’t get the addendum bonus. For example, if you cast Sphinx’s Insight during your main phase, you gain 2 life during its resolution, after you draw two cards."
+      },
+      {
+        "date": "2019-01-25",
+        "text": "If a spell with an addendum ability is copied, the copy won’t give you the addendum bonus. This is because the copy wasn’t cast at all."
+      }
+    ],
+    "scryfallOracleId": "ccfb612a-762d-41a7-bc3d-268c6abf8e85",
+    "subtypes": [],
+    "supertypes": [],
+    "text": "Return target creature to its owner's hand.\nAddendum — If you cast this spell during your main phase, draw a card.",
+    "type": "Instant",
+    "types": [
+      "Instant"
+    ],
+    "uuid": "3f39991a-bbd7-529f-8ab3-58d06d328eb0"
+  },
+  "Code of Constraint": {
+    "colorIdentity": [
+      "U"
+    ],
+    "colors": [
+      "U"
+    ],
+    "convertedManaCost": 3.0,
+    "edhrecRank": 13884,
+    "foreignData": [
+      {
+        "language": "German",
+        "name": "Hemmende Formel",
+        "text": "Eine Kreatur deiner Wahl erhält -4/-0 bis zum Ende des Zuges.\nZiehe eine Karte.\nAddendum — Falls du diesen Zauberspruch in deiner Hauptphase gewirkt hast, tappe die Kreatur und sie enttappt nicht während des nächsten Enttappsegments ihres Beherrschers.",
+        "type": "Spontanzauber"
+      },
+      {
+        "language": "Spanish",
+        "name": "Código de represión",
+        "text": "La criatura objetivo obtiene -4/-0 hasta el final del turno.\nRoba una carta.\nAdenda — Si lanzas este hechizo durante tu fase principal, gira esa criatura y no se endereza durante el próximo paso de enderezar de su controlador.",
+        "type": "Instantáneo"
+      },
+      {
+        "language": "French",
+        "name": "Code de contrainte",
+        "text": "La créature ciblée gagne -4/-0 jusqu'à la fin du tour.\nPiochez une carte.\nAddenda — Si vous avez lancé ce sort pendant votre phase principale, engagez cette créature et elle ne se dégage pas pendant la prochaine étape de dégagement de son contrôleur.",
+        "type": "Éphémère"
+      },
+      {
+        "language": "Italian",
+        "name": "Codice di Costrizione",
+        "text": "Una creatura bersaglio prende -4/-0 fino alla fine del turno.\nPesca una carta.\nAppendice — Se hai lanciato questa magia durante la tua fase principale, TAPpa quella creatura ed essa non STAPpa durante il prossimo STAP del suo controllore.",
+        "type": "Istantaneo"
+      },
+      {
+        "language": "Japanese",
+        "name": "制動規範",
+        "text": "クリーチャー１体を対象とする。ターン終了時まで、それは－４/－０の修整を受ける。\nカードを１枚引く。\n附則 ― あなたがこの呪文をあなたのメイン・フェイズ中に唱えていたなら、そのクリーチャーをタップする。そのクリーチャーはそれのコントローラーの次のアンタップ・ステップにアンタップしない。",
+        "type": "インスタント"
+      },
+      {
+        "language": "Korean",
+        "name": "통제 규약",
+        "text": "생물을 목표로 정한다. 그 생물은 턴종료까지 -4/-0을 받는다.\n카드 한 장을 뽑는다.\n부록 — 당신이 이 주문을 당신의 본단계에 발동했다면, 그 생물을 탭한다. 그 생물은 조종자의 다음 언탭단에 언탭되지 않는다.",
+        "type": "순간마법"
+      },
+      {
+        "language": "Portuguese (Brazil)",
+        "name": "Código de Restrição",
+        "text": "A criatura alvo recebe -4/-0 até o final do turno.\nCompre um card.\nAdendo — Se você conjurou esta mágica durante sua fase principal, vire aquela criatura e ela não será desvirada durante a próxima etapa de desvirar de seu controlador.",
+        "type": "Mágica Instantânea"
+      },
+      {
+        "language": "Russian",
+        "name": "Кодекс Ограничений",
+        "text": "Целевое существо получает -4/-0 до конца хода.\nВозьмите карту.\nПриложение — Если вы разыграли это заклинание во время вашей главной фазы, поверните то существо, и оно не разворачивается во время следующего шага разворота контролирующего его игрока.",
+        "type": "Мгновенное заклинание"
+      },
+      {
+        "language": "Chinese Simplified",
+        "name": "拘捕守则",
+        "text": "目标生物得-4/-0直到回合结束。\n抓一张牌。\n附案～如果你是在你的行动阶段施放此咒语，则横置该生物，且它于其操控者的下一个重置步骤中不能重置。",
+        "type": "瞬间"
+      },
+      {
+        "language": "Chinese Traditional",
+        "name": "拘捕守則",
+        "text": "目標生物得-4/-0直到回合結束。\n抽一張牌。\n附案～如果你是在你的行動階段施放此咒語，則橫置該生物，且它於其操控者的下一個重置步驟中不能重置。",
+        "type": "瞬間"
+      }
+    ],
+    "layout": "normal",
+    "legalities": {
+      "brawl": "Legal",
+      "commander": "Legal",
+      "duel": "Legal",
+      "future": "Legal",
+      "historic": "Legal",
+      "legacy": "Legal",
+      "modern": "Legal",
+      "penny": "Legal",
+      "pioneer": "Legal",
+      "standard": "Legal",
+      "vintage": "Legal"
+    },
+    "manaCost": "{2}{U}",
+    "mtgArenaId": 69163,
+    "mtgoId": 71070,
+    "name": "Code of Constraint",
+    "printings": [
+      "RNA"
+    ],
+    "purchaseUrls": {
+      "cardmarket": "https://mtgjson.com/links/0c37a74032892730",
+      "tcgplayer": "https://mtgjson.com/links/ff0ce93d9b40ce4f"
+    },
+    "rulings": [
+      {
+        "date": "2019-01-25",
+        "text": "If the target creature is an illegal target by the time Code of Constraint tries to resolve, the spell doesn’t resolve. You don’t draw a card."
+      },
+      {
+        "date": "2019-01-25",
+        "text": "Code of Constraint can target a creature that’s already tapped. If you cast it during your main phase, that creature won’t untap during its controller’s next untap step."
+      },
+      {
+        "date": "2019-01-25",
+        "text": "Addendum abilities of instant spells apply while the spell is resolving, not immediately after casting it. If the spell is countered, you don’t get the addendum bonus. For example, if you cast Sphinx’s Insight during your main phase, you gain 2 life during its resolution, after you draw two cards."
+      },
+      {
+        "date": "2019-01-25",
+        "text": "If a spell with an addendum ability is copied, the copy won’t give you the addendum bonus. This is because the copy wasn’t cast at all."
+      }
+    ],
+    "scryfallOracleId": "b2f83483-24a4-45db-a04e-42ff732ca98a",
+    "subtypes": [],
+    "supertypes": [],
+    "text": "Target creature gets -4/-0 until end of turn.\nDraw a card.\nAddendum — If you cast this spell during your main phase, tap that creature and it doesn't untap during its controller's next untap step.",
+    "type": "Instant",
+    "types": [
+      "Instant"
+    ],
+    "uuid": "35d6b632-f673-5741-805f-e6e7d2740218"
+  },
+  "Exclusion Mage": {
+    "colorIdentity": [
+      "U"
+    ],
+    "colors": [
+      "U"
+    ],
+    "convertedManaCost": 3.0,
+    "edhrecRank": 4106,
+    "foreignData": [
+      {
+        "flavorText": "Für einen siegreichen Kampf musst du deine Feinde weise wählen.",
+        "language": "German",
+        "name": "Vertreibungsmagierin",
+        "text": "Wenn die Vertreibungsmagierin ins Spiel kommt, bringe eine Kreatur deiner Wahl, die ein Gegner kontrolliert, auf die Hand ihres Besitzers zurück.",
+        "type": "Kreatur — Mensch, Zauberer"
+      },
+      {
+        "flavorText": "Para tener éxito en un combate hay que empezar por saber con quién merece la pena luchar.",
+        "language": "Spanish",
+        "name": "Maga de exclusión",
+        "text": "Cuando la Maga de exclusión entre al campo de batalla, regresa la criatura objetivo que controla un oponente a la mano de su propietario.",
+        "type": "Criatura — Hechicero humano"
+      },
+      {
+        "flavorText": "Un combat réussi commence par savoir qui vaut la peine d'être affronté.",
+        "language": "French",
+        "name": "Mage d'exclusion",
+        "text": "Quand la Mage d'exclusion arrive sur le champ de bataille, renvoyez une créature ciblée qu'un adversaire contrôle dans la main de son propriétaire.",
+        "type": "Créature : humain et sorcier"
+      },
+      {
+        "flavorText": "Le battaglie vittoriose iniziano col capire chi vale la pena di affrontare.",
+        "language": "Italian",
+        "name": "Maga dell'Esclusione",
+        "text": "Quando la Maga dell'Esclusione entra nel campo di battaglia, fai tornare una creatura bersaglio controllata da un avversario in mano al suo proprietario.",
+        "type": "Creatura — Mago Umano"
+      },
+      {
+        "flavorText": "戦いにおける勝利は、戦うに値する者を知ることから始まる。",
+        "language": "Japanese",
+        "name": "排斥する魔道士",
+        "text": "排斥する魔道士が戦場に出たとき、対戦相手がコントロールしているクリーチャー１体を対象とし、それをオーナーの手札に戻す。",
+        "type": "クリーチャー — 人間・ウィザード"
+      },
+      {
+        "flavorText": "성공적인 전투는 누구와 싸우는 게 좋은지를 아는 것부터 시작된다.",
+        "language": "Korean",
+        "name": "축출 마도사",
+        "text": "축출 마도사가 전장에 들어올 때, 상대가 조종하는 생물을 목표로 정한다. 그 생물을 소유자의 손으로 되돌린다.",
+        "type": "생물 — 인간 마법사"
+      },
+      {
+        "flavorText": "As batalhas bem-sucedidas começam por saber com quem vale a pena lutar.",
+        "language": "Portuguese (Brazil)",
+        "name": "Maga da Exclusão",
+        "text": "Quando Maga da Exclusão entrar no campo de batalha, devolva a criatura alvo que um oponente controla para a mão de seu dono.",
+        "type": "Criatura — Humano Mago"
+      },
+      {
+        "flavorText": "Успешные битвы начинаются с понимания, с кем стоит сражаться.",
+        "language": "Russian",
+        "name": "Маг Исключений",
+        "text": "Когда Маг Исключений выходит на поле битвы, верните целевое существо под контролем оппонента в руку его владельца.",
+        "type": "Существо — Человек Чародей"
+      },
+      {
+        "flavorText": "胜利之路，从挑选打得过的对手开始。",
+        "language": "Chinese Simplified",
+        "name": "排拒法师",
+        "text": "当排拒法师进战场时，将目标由对手操控的生物移回其拥有者手上。",
+        "type": "生物 ～人类／法术师"
+      },
+      {
+        "flavorText": "勝利之路，從挑選打得過的對手開始。",
+        "language": "Chinese Traditional",
+        "name": "排拒法師",
+        "text": "當排拒法師進戰場時，將目標由對手操控的生物移回其擁有者手上。",
+        "type": "生物 ～人類／魔法師"
+      }
+    ],
+    "layout": "normal",
+    "legalities": {
+      "commander": "Legal",
+      "duel": "Legal",
+      "historic": "Legal",
+      "legacy": "Legal",
+      "modern": "Legal",
+      "pioneer": "Legal",
+      "vintage": "Legal"
+    },
+    "manaCost": "{2}{U}",
+    "mtgArenaId": 67790,
+    "mtgoId": 68271,
+    "name": "Exclusion Mage",
+    "power": "2",
+    "printings": [
+      "M19"
+    ],
+    "purchaseUrls": {
+      "cardmarket": "https://mtgjson.com/links/27405a7714c340d6",
+      "tcgplayer": "https://mtgjson.com/links/57cf5f97b7d3f9c2"
+    },
+    "rulings": [],
+    "scryfallOracleId": "fd28fe55-36cd-4242-8dd4-edb58fbb9895",
+    "subtypes": [
+      "Human",
+      "Wizard"
+    ],
+    "supertypes": [],
+    "text": "When Exclusion Mage enters the battlefield, return target creature an opponent controls to its owner's hand.",
+    "toughness": "2",
+    "type": "Creature — Human Wizard",
+    "types": [
+      "Creature"
+    ],
+    "uuid": "83320a82-60e2-5d2e-96ce-9fb3e84d27bb"
+  },
+  "Firemane Avenger": {
+    "colorIdentity": [
+      "R",
+      "W"
+    ],
+    "colors": [
+      "R",
+      "W"
+    ],
+    "convertedManaCost": 4.0,
+    "edhrecRank": 4714,
+    "foreignData": [
+      {
+        "flavorText": "Feuermähne Nevena führte den siegreichen Angriff auf die Rebellen des Barbu-Dachs. Daraufhin setzten die Gildenfreien ein Kopfgeld auf sie aus.",
+        "language": "German",
+        "name": "Feuerschweif-Rächerin",
+        "text": "Fliegend\nBataillon — Immer wenn die Feuerschweif-Rächerin und mindestens zwei andere Kreaturen angreifen, fügt die Feuerschweif-Rächerin einem Ziel deiner Wahl 3 Schadenspunkte zu und du erhältst 3 Lebenspunkte dazu.",
+        "type": "Kreatur — Engel"
+      },
+      {
+        "flavorText": "La melenafuego Nevena lideró el victorioso asalto a los rebeldes de la Azotea de Barbu. Ahora los sinportal han decretado su muerte.",
+        "language": "Spanish",
+        "name": "Vengadora melenafuego",
+        "text": "Vuela.\nBatallón — Siempre que la Vengadora melenafuego y al menos otras dos criaturas ataquen, la Vengadora melenafuego hace 3 puntos de daño a cualquier objetivo y tú ganas 3 vidas.",
+        "type": "Criatura — Ángel"
+      },
+      {
+        "flavorText": "C'est Névéna Crinefeu qui a mené l'assaut victorieux sur les insurgés du Toit de Berbu. Les Sans porte ont juré d'avoir sa tête.",
+        "language": "French",
+        "name": "Vengeresse crinefeu",
+        "text": "Vol\nBataillon — À chaque fois que la Vengeresse crinefeu et au moins deux autres créatures attaquent, la Vengeresse crinefeu inflige 3 blessures à n'importe quelle cible, et vous gagnez 3 points de vie.",
+        "type": "Créature : ange"
+      },
+      {
+        "flavorText": "Nevena Chioma di Fuoco ha guidato l'assalto vittorioso contro i ribelli dei Tetti di Barbu. Ora i Senza Cancello hanno decretato la sua condanna a morte.",
+        "language": "Italian",
+        "name": "Vendicatrice Chioma di Fuoco",
+        "text": "Volare\nBattaglione — Ogniqualvolta la Vendicatrice Chioma di Fuoco e almeno altre due creature attaccano, la Vendicatrice Chioma di Fuoco infligge 3 danni a un qualsiasi bersaglio e tu guadagni 3 punti vita.",
+        "type": "Creatura — Angelo"
+      },
+      {
+        "flavorText": "炎まといのネヴェーナはバーブの屋上民の反乱勢力に対する奇襲を指揮し、成功に導いた。今では門なしが彼女を亡き者にしようと狙っている。",
+        "language": "Japanese",
+        "name": "炎まといの報復者",
+        "text": "飛行\n大隊 ― 炎まといの報復者と少なくとも２体の他のクリーチャーが攻撃するたび、クリーチャー１体かプレインズウォーカー１体かプレイヤー１人を対象とする。炎まといの報復者はそれに３点のダメージを与え、あなたは３点のライフを得る。",
+        "type": "クリーチャー — 天使"
+      }
+    ],
+    "layout": "normal",
+    "legalities": {
+      "commander": "Legal",
+      "duel": "Legal",
+      "legacy": "Legal",
+      "modern": "Legal",
+      "penny": "Legal",
+      "pioneer": "Legal",
+      "vintage": "Legal"
+    },
+    "manaCost": "{2}{R}{W}",
+    "name": "Firemane Avenger",
+    "power": "3",
+    "printings": [
+      "GK1",
+      "GTC",
+      "PGTC",
+      "PRM"
+    ],
+    "purchaseUrls": {
+      "cardmarket": "https://mtgjson.com/links/cdbda53472b8df46",
+      "tcgplayer": "https://mtgjson.com/links/9be73c7c7697713b"
+    },
+    "rulings": [
+      {
+        "date": "2013-01-24",
+        "text": "If the target permanent or player is an illegal target when Firemane Avenger’s battalion ability tries to resolve, the ability won’t resolve and none of its effects will happen. You won’t gain life."
+      },
+      {
+        "date": "2013-01-24",
+        "text": "If Firemane Avenger’s battalion ability resolves but some or all of the damage is prevented, you’ll still gain 3 life."
+      },
+      {
+        "date": "2013-04-15",
+        "text": "The three attacking creatures don’t have to be attacking the same player or planeswalker."
+      },
+      {
+        "date": "2013-04-15",
+        "text": "Once a battalion ability has triggered, it doesn’t matter how many creatures are still attacking when that ability resolves."
+      },
+      {
+        "date": "2013-04-15",
+        "text": "The effects of battalion abilities vary from card to card. Read each card carefully."
+      }
+    ],
+    "scryfallOracleId": "7ea71a36-8fa8-4ba3-9cb1-7fc6917c3ddd",
+    "subtypes": [
+      "Angel"
+    ],
+    "supertypes": [],
+    "text": "Flying\nBattalion — Whenever Firemane Avenger and at least two other creatures attack, Firemane Avenger deals 3 damage to any target and you gain 3 life.",
+    "toughness": "3",
+    "type": "Creature — Angel",
+    "types": [
+      "Creature"
+    ],
+    "uuid": "12e5a57a-cab6-5461-a41e-5d199f9402e8"
+  },
+  "Impulse": {
+    "colorIdentity": [
+      "U"
+    ],
+    "colors": [
+      "U"
+    ],
+    "convertedManaCost": 2.0,
+    "edhrecRank": 428,
+    "foreignData": [],
+    "layout": "normal",
+    "legalities": {
+      "commander": "Legal",
+      "duel": "Legal",
+      "legacy": "Legal",
+      "pauper": "Legal",
+      "vintage": "Legal"
+    },
+    "manaCost": "{1}{U}",
+    "name": "Impulse",
+    "printings": [
+      "BBD",
+      "BTD",
+      "DDN",
+      "F01",
+      "MB1",
+      "PRM",
+      "V13",
+      "VIS",
+      "WC97",
+      "WC98"
+    ],
+    "purchaseUrls": {
+      "tcgplayer": "https://mtgjson.com/links/dd34cbdaa38d9f7b"
+    },
+    "rulings": [
+      {
+        "date": "2004-10-04",
+        "text": "This is not a draw."
+      },
+      {
+        "date": "2004-10-04",
+        "text": "Due to errata, you no longer shuffle your library."
+      }
+    ],
+    "scryfallOracleId": "f6bd2902-7f8b-419e-bbc7-bcab0c1b7e01",
+    "subtypes": [],
+    "supertypes": [],
+    "text": "Look at the top four cards of your library. Put one of them into your hand and the rest on the bottom of your library in any order.",
+    "type": "Instant",
+    "types": [
+      "Instant"
+    ],
+    "uuid": "ed46a445-370b-54c5-b380-b32e3d430f15"
+  },
+  "Lightning Bolt": {
+    "colorIdentity": [
+      "R"
+    ],
+    "colors": [
+      "R"
+    ],
+    "convertedManaCost": 1.0,
+    "edhrecRank": 641,
+    "foreignData": [],
+    "layout": "normal",
+    "legalities": {
+      "commander": "Legal",
+      "duel": "Legal",
+      "legacy": "Legal",
+      "modern": "Legal",
+      "pauper": "Legal",
+      "vintage": "Legal"
+    },
+    "manaCost": "{R}",
+    "name": "Lightning Bolt",
+    "printings": [
+      "2ED",
+      "3ED",
+      "4BB",
+      "4ED",
+      "A25",
+      "ATH",
+      "BTD",
+      "CED",
+      "CEI",
+      "E01",
+      "FBB",
+      "JGP",
+      "LEA",
+      "LEB",
+      "M10",
+      "M11",
+      "MB1",
+      "ME1",
+      "MM2",
+      "P10",
+      "PD2",
+      "PF19",
+      "PRM",
+      "PTC",
+      "SUM",
+      "TD0"
+    ],
+    "purchaseUrls": {
+      "cardmarket": "https://mtgjson.com/links/4de4af610f73a1ae",
+      "tcgplayer": "https://mtgjson.com/links/d7bcc2d0de1290a6"
+    },
+    "rulings": [],
+    "scryfallOracleId": "4457ed35-7c10-48c8-9776-456485fdf070",
+    "subtypes": [],
+    "supertypes": [],
+    "text": "Lightning Bolt deals 3 damage to any target.",
+    "type": "Instant",
+    "types": [
+      "Instant"
+    ],
+    "uuid": "c5afc8ab-42c5-52bd-a79b-de5a0f522ce4"
+  },
+  "Lightning Helix": {
+    "colorIdentity": [
+      "R",
+      "W"
+    ],
+    "colors": [
+      "R",
+      "W"
+    ],
+    "convertedManaCost": 2.0,
+    "edhrecRank": 3317,
+    "foreignData": [
+      {
+        "flavorText": "Obwohl sie nicht so bekannt wie die Soldaten der Armee sind, werden die Magier-Priester der Boros-Legion von den Unschuldigen respektiert und von den Geistern der Schuldigen gehasst.",
+        "language": "German",
+        "name": "Blitzhelix",
+        "text": "Die Blitzhelix fügt einem Ziel deiner Wahl 3 Schadenspunkte zu und du erhältst 3 Lebenspunkte dazu.",
+        "type": "Spontanzauber"
+      },
+      {
+        "flavorText": "Aunque son menos conocidos que su ejército de soldados, los magos-sacerdotes de la Legión Boros son tan respetados por los inocentes como son odiados por los fantasmas de los culpables.",
+        "language": "Spanish",
+        "name": "Hélice de relámpagos",
+        "text": "La Hélice de relámpagos hace 3 puntos de daño a cualquier objetivo y tú ganas 3 vidas.",
+        "type": "Instantáneo"
+      },
+      {
+        "flavorText": "Bien que moins connus que ses soldats, les prêtres-mage de la Légion de Boros sont autant respectés par les innocents qu'ils sont haïs par les fantômes des coupables.",
+        "language": "French",
+        "name": "Hélice d'éclairs",
+        "text": "L'Hélice d'éclairs inflige 3 blessures à n'importe quelle cible et vous gagnez 3 points de vie.",
+        "type": "Éphémère"
+      },
+      {
+        "flavorText": "Benché meno conosciuti del suo esercito di soldati, i preti-maghi della Legione Boros sono tanto rispettati dagli innocenti quanto odiati dai fantasmi dei colpevoli.",
+        "language": "Italian",
+        "name": "Spirale Fulminante",
+        "text": "La Spirale Fulminante infligge 3 danni a un qualsiasi bersaglio e tu guadagni 3 punti vita.",
+        "type": "Istantaneo"
+      },
+      {
+        "flavorText": "軍団の兵士たちほど有名ではないが、ボロス軍の魔道僧侶は純潔の者に愛され、罪を負った者の霊に嫌われている。",
+        "language": "Japanese",
+        "name": "稲妻のらせん",
+        "text": "クリーチャー１体かプレインズウォーカー１体かプレイヤー１人を対象とする。稲妻のらせんはそれに３点のダメージを与え、あなたは３点のライフを得る。",
+        "type": "インスタント"
+      }
+    ],
+    "layout": "normal",
+    "legalities": {
+      "commander": "Legal",
+      "duel": "Legal",
+      "legacy": "Legal",
+      "modern": "Legal",
+      "vintage": "Legal"
+    },
+    "manaCost": "{R}{W}",
+    "name": "Lightning Helix",
+    "printings": [
+      "DDH",
+      "DDN",
+      "E02",
+      "GK1",
+      "HOP",
+      "IMA",
+      "MB1",
+      "MMA",
+      "P06",
+      "PRM",
+      "RAV"
+    ],
+    "purchaseUrls": {
+      "cardmarket": "https://mtgjson.com/links/c7f9fb586c53cb3b",
+      "tcgplayer": "https://mtgjson.com/links/0a5758f86f766c81"
+    },
+    "rulings": [
+      {
+        "date": "2017-11-17",
+        "text": "If the chosen target is illegal when Lightning Helix tries to resolve, it won’t resolve and none of its effects will happen. You won’t gain 3 life."
+      }
+    ],
+    "scryfallOracleId": "800c258a-cfc4-4a54-a667-065ea8dea69e",
+    "subtypes": [],
+    "supertypes": [],
+    "text": "Lightning Helix deals 3 damage to any target and you gain 3 life.",
+    "type": "Instant",
+    "types": [
+      "Instant"
+    ],
+    "uuid": "93554445-3690-5197-b89e-8841e3853949"
+  },
+  "Man-o'-War": {
+    "colorIdentity": [
+      "U"
+    ],
+    "colors": [
+      "U"
+    ],
+    "convertedManaCost": 3.0,
+    "edhrecRank": 2209,
+    "foreignData": [
+      {
+        "language": "German",
+        "name": "Galeerenqualle",
+        "text": "Wenn die Galeerenqualle aus Deiner Hand ins Spiel kommt, bringe eine Kreatur Deiner Wahl zurück auf die Hand ihres Besitzers.",
+        "type": "Beschwörungszauber"
+      },
+      {
+        "language": "Spanish",
+        "name": "Carabela"
+      },
+      {
+        "language": "French",
+        "name": "Physalie"
+      },
+      {
+        "language": "Japanese",
+        "name": "大クラゲ"
+      }
+    ],
+    "layout": "normal",
+    "legalities": {
+      "commander": "Legal",
+      "duel": "Legal",
+      "legacy": "Legal",
+      "modern": "Legal",
+      "pauper": "Legal",
+      "penny": "Legal",
+      "vintage": "Legal"
+    },
+    "manaCost": "{2}{U}",
+    "name": "Man-o'-War",
+    "power": "2",
+    "printings": [
+      "A25",
+      "BRB",
+      "DD2",
+      "DDO",
+      "EMA",
+      "JVC",
+      "MB1",
+      "MH1",
+      "PAL02",
+      "POR",
+      "PRM",
+      "S99",
+      "TD0",
+      "VIS",
+      "VMA",
+      "WC97",
+      "WC98"
+    ],
+    "purchaseUrls": {
+      "cardmarket": "https://mtgjson.com/links/a77a2a514ff97db5",
+      "tcgplayer": "https://mtgjson.com/links/40f8d6d22b99ea33"
+    },
+    "rulings": [
+      {
+        "date": "2019-06-14",
+        "text": "If there are no other creatures on the battlefield when Man-o’-War enters the battlefield, its ability must target itself."
+      }
+    ],
+    "scryfallOracleId": "67a3541c-8408-40c8-b44f-90035b860f57",
+    "subtypes": [
+      "Jellyfish"
+    ],
+    "supertypes": [],
+    "text": "When Man-o'-War enters the battlefield, return target creature to its owner's hand.",
+    "toughness": "2",
+    "type": "Creature — Jellyfish",
+    "types": [
+      "Creature"
+    ],
+    "uuid": "4363f9db-8af9-5fef-a31b-7dac4e30412a"
+  },
+  "Oath of Chandra": {
+    "colorIdentity": [
+      "R"
+    ],
+    "colors": [
+      "R"
+    ],
+    "convertedManaCost": 2.0,
+    "edhrecRank": 6677,
+    "foreignData": [],
+    "isDateStamped": true,
+    "layout": "normal",
+    "legalities": {
+      "commander": "Legal",
+      "duel": "Legal",
+      "legacy": "Legal",
+      "modern": "Legal",
+      "penny": "Legal",
+      "pioneer": "Legal",
+      "vintage": "Legal"
+    },
+    "manaCost": "{1}{R}",
+    "name": "Oath of Chandra",
+    "printings": [
+      "OGW",
+      "POGW"
+    ],
+    "rulings": [
+      {
+        "date": "2016-01-22",
+        "text": "Oath of Chandra’s last ability will trigger even if the planeswalker that entered the battlefield under your control is no longer on the battlefield, no longer under your control, or no longer a planeswalker. This is also true if Oath of Chandra wasn’t on the battlefield when the planeswalker entered."
+      },
+      {
+        "date": "2016-01-22",
+        "text": "The last ability triggers only once per turn, even if more than one planeswalker entered the battlefield under your control."
+      },
+      {
+        "date": "2016-01-22",
+        "text": "Each of the Oaths is legendary: if you control more than one of any particular Oath, you choose one to remain on the battlefield and the others are put into your graveyard."
+      },
+      {
+        "date": "2016-01-22",
+        "text": "The “legend rule” checks the full names of legendary permanents. You can control Oath of Gideon and Oath of Chandra at the same time, for example."
+      },
+      {
+        "date": "2016-01-22",
+        "text": "Even if you control a particular Oath, you can cast another of that Oath to take advantage of its enters-the-battlefield ability. It will enter the battlefield, causing its first ability to trigger. You will then choose one to keep, as detailed above, and then its enters-the-battlefield ability will resolve."
+      }
+    ],
+    "scryfallOracleId": "53a0923f-7da8-4e31-a231-9b275916e2a2",
+    "subtypes": [],
+    "supertypes": [
+      "Legendary"
+    ],
+    "text": "When Oath of Chandra enters the battlefield, it deals 3 damage to target creature an opponent controls.\nAt the beginning of each end step, if a planeswalker entered the battlefield under your control this turn, Oath of Chandra deals 2 damage to each opponent.",
+    "type": "Legendary Enchantment",
+    "types": [
+      "Enchantment"
+    ],
+    "uuid": "cd2c153e-6f98-58ad-aef2-b30118bdd611"
+  },
+  "Oath of Jace": {
+    "colorIdentity": [
+      "U"
+    ],
+    "colors": [
+      "U"
+    ],
+    "convertedManaCost": 3.0,
+    "edhrecRank": 2511,
+    "foreignData": [],
+    "isDateStamped": true,
+    "layout": "normal",
+    "legalities": {
+      "commander": "Legal",
+      "duel": "Legal",
+      "legacy": "Legal",
+      "modern": "Legal",
+      "penny": "Legal",
+      "pioneer": "Legal",
+      "vintage": "Legal"
+    },
+    "manaCost": "{2}{U}",
+    "name": "Oath of Jace",
+    "printings": [
+      "OGW",
+      "POGW"
+    ],
+    "rulings": [
+      {
+        "date": "2016-01-22",
+        "text": "If you control no planeswalkers as the last ability resolves, you won’t scry at all. Abilities that trigger whenever you scry won’t trigger."
+      },
+      {
+        "date": "2016-01-22",
+        "text": "Each of the Oaths is legendary: if you control more than one of any particular Oath, you choose one to remain on the battlefield and the others are put into your graveyard."
+      },
+      {
+        "date": "2016-01-22",
+        "text": "The “legend rule” checks the full names of legendary permanents. You can control Oath of Gideon and Oath of Chandra at the same time, for example."
+      },
+      {
+        "date": "2016-01-22",
+        "text": "Even if you control a particular Oath, you can cast another of that Oath to take advantage of its enters-the-battlefield ability. It will enter the battlefield, causing its first ability to trigger. You will then choose one to keep, as detailed above, and then its enters-the-battlefield ability will resolve."
+      }
+    ],
+    "scryfallOracleId": "dc92b420-8ac7-4478-a287-3d897357be08",
+    "subtypes": [],
+    "supertypes": [
+      "Legendary"
+    ],
+    "text": "When Oath of Jace enters the battlefield, draw three cards, then discard two cards.\nAt the beginning of your upkeep, scry X, where X is the number of planeswalkers you control.",
+    "type": "Legendary Enchantment",
+    "types": [
+      "Enchantment"
+    ],
+    "uuid": "13d11cdd-8a8b-555b-b7c9-ab494352d3d7"
+  },
+  "Oath of Kaya": {
+    "colorIdentity": [
+      "B",
+      "W"
+    ],
+    "colors": [
+      "B",
+      "W"
+    ],
+    "convertedManaCost": 3.0,
+    "edhrecRank": 4651,
+    "foreignData": [],
+    "isDateStamped": true,
+    "layout": "normal",
+    "legalities": {
+      "brawl": "Legal",
+      "commander": "Legal",
+      "duel": "Legal",
+      "future": "Legal",
+      "historic": "Legal",
+      "legacy": "Legal",
+      "modern": "Legal",
+      "pioneer": "Legal",
+      "standard": "Legal",
+      "vintage": "Legal"
+    },
+    "manaCost": "{1}{W}{B}",
+    "name": "Oath of Kaya",
+    "printings": [
+      "PWAR",
+      "WAR"
+    ],
+    "rulings": [
+      {
+        "date": "2019-05-03",
+        "text": "If the target is an illegal target by the time the first ability of Oath of Kaya tries to resolve, the ability doesn’t resolve. You won’t gain 3 life."
+      },
+      {
+        "date": "2019-05-03",
+        "text": "If an opponent attacks more than one planeswalker you control, the last ability of Oath of Kaya triggers once for each of those attacked planeswalkers."
+      }
+    ],
+    "scryfallOracleId": "8b3febb9-0597-46af-b005-982f1a31c83e",
+    "subtypes": [],
+    "supertypes": [
+      "Legendary"
+    ],
+    "text": "When Oath of Kaya enters the battlefield, it deals 3 damage to any target and you gain 3 life.\nWhenever an opponent attacks a planeswalker you control with one or more creatures, Oath of Kaya deals 2 damage to that player and you gain 2 life.",
+    "type": "Legendary Enchantment",
+    "types": [
+      "Enchantment"
+    ],
+    "uuid": "8c745319-76cf-5208-a21a-7d555af66868"
+  },
+  "Oath of Nissa": {
+    "colorIdentity": [
+      "G"
+    ],
+    "colors": [
+      "G"
+    ],
+    "convertedManaCost": 1.0,
+    "edhrecRank": 1724,
+    "foreignData": [],
+    "isDateStamped": true,
+    "layout": "normal",
+    "legalities": {
+      "commander": "Legal",
+      "duel": "Legal",
+      "legacy": "Legal",
+      "modern": "Legal",
+      "pioneer": "Banned",
+      "vintage": "Legal"
+    },
+    "manaCost": "{G}",
+    "name": "Oath of Nissa",
+    "printings": [
+      "OGW",
+      "POGW"
+    ],
+    "rulings": [
+      {
+        "date": "2016-01-22",
+        "text": "Each of the Oaths is legendary: if you control more than one of any particular Oath, you choose one to remain on the battlefield and the others are put into your graveyard."
+      },
+      {
+        "date": "2016-01-22",
+        "text": "The “legend rule” checks the full names of legendary permanents. You can control Oath of Gideon and Oath of Chandra at the same time, for example."
+      },
+      {
+        "date": "2016-01-22",
+        "text": "Even if you control a particular Oath, you can cast another of that Oath to take advantage of its enters-the-battlefield ability. It will enter the battlefield, causing its first ability to trigger. You will then choose one to keep, as detailed above, and then its enters-the-battlefield ability will resolve."
+      }
+    ],
+    "scryfallOracleId": "c4efdbab-711d-4269-9b24-b05d36f7e5c7",
+    "subtypes": [],
+    "supertypes": [
+      "Legendary"
+    ],
+    "text": "When Oath of Nissa enters the battlefield, look at the top three cards of your library. You may reveal a creature, land, or planeswalker card from among them and put it into your hand. Put the rest on the bottom of your library in any order.\nYou may spend mana as though it were mana of any color to cast planeswalker spells.",
+    "type": "Legendary Enchantment",
+    "types": [
+      "Enchantment"
+    ],
+    "uuid": "c7684398-a6d1-57b2-927f-459e5e78d65a"
+  },
+  "Skymark Roc": {
+    "colorIdentity": [
+      "U",
+      "W"
+    ],
+    "colors": [
+      "U",
+      "W"
+    ],
+    "convertedManaCost": 4.0,
+    "edhrecRank": 9216,
+    "foreignData": [
+      {
+        "flavorText": "„Versuche, nicht schuldig zu wirken. Oder lecker.\" —Thorpe, Gassenjunge",
+        "language": "German",
+        "name": "Himmelszeichen-Roc",
+        "text": "Fliegend\nImmer wenn der Himmelszeichen-Roc angreift, kannst du eine Kreatur deiner Wahl mit Widerstandskraft 2 oder weniger, die der verteidigende Spieler kontrolliert, auf die Hand ihres Besitzers zurückbringen.",
+        "type": "Kreatur — Vogel"
+      },
+      {
+        "flavorText": "\"Intenta no parecer culpable. Ni delicioso.\" —Thorpe, chiquillo callejero",
+        "language": "Spanish",
+        "name": "Roc marca celestial",
+        "text": "Vuela.\nSiempre que el Roc marca celestial ataque, puedes regresar la criatura objetivo con resistencia de 2 o menos que controla el jugador defensor a la mano de su propietario.",
+        "type": "Criatura — Ave"
+      },
+      {
+        "flavorText": "« Essaie de ne pas avoir l'air coupable. Ou appétissant. » —Thorpe, gamin des rues",
+        "language": "French",
+        "name": "Roc marqueciel",
+        "text": "Vol\nÀ chaque fois que le Roc marqueciel attaque, vous pouvez renvoyer une créature ciblée d'endurance inférieure ou égale à 2 et que le joueur défenseur contrôle dans la main de son propriétaire.",
+        "type": "Créature : oiseau"
+      },
+      {
+        "flavorText": "\"Cerca di non avere un'aria colpevole. O appetitosa.\" —Thorpe, teppista di strada",
+        "language": "Italian",
+        "name": "Roc Marchio Celeste",
+        "text": "Volare\nOgniqualvolta il Roc Marchio Celeste attacca, puoi far tornare in mano al suo proprietario una creatura bersaglio con costituzione pari o inferiore a 2 e controllata dal giocatore in difesa.",
+        "type": "Creatura — Uccello"
+      },
+      {
+        "flavorText": "「悪さしたように見られるなよ。うまそうに見えてもだめだぞ。」 ――浮浪児ソープ",
+        "language": "Japanese",
+        "name": "空印のロック",
+        "text": "飛行\n空印のロックが攻撃するたび、防御プレイヤーがコントロールしているタフネスが２以下のクリーチャー１体を対象とする。あなたはそれをオーナーの手札に戻してもよい。",
+        "type": "クリーチャー — 鳥"
+      },
+      {
+        "flavorText": "\"죄인처럼 보이지 않도록 하라. 맛있어 보여서도 안 된다.\" —거리의 부랑자 쏘프",
+        "language": "Korean",
+        "name": "창공표식 로크",
+        "text": "비행\n창공표식 로크가 공격할 때마다, 수비플레이어가 조종하는 생물 중 방어력이 2 이하인 생물 한 개를 목표로 정한다. 당신은 그 생물을 소유자의 손으로 되돌릴 수 있다.",
+        "type": "생물 — 조류"
+      },
+      {
+        "flavorText": "\"Tente não parecer culpado. Nem delicioso.\" — Thorpe, moleque de rua",
+        "language": "Portuguese (Brazil)",
+        "name": "Roca da Marca Celeste",
+        "text": "Voar\nToda vez que Roca da Marca Celeste ataca, você pode devolver a criatura alvo que o jogador defensor controla que tenha resistência menor ou igual a 2 para a mão de seu dono.",
+        "type": "Criatura — Ave"
+      },
+      {
+        "flavorText": "«Постарайся не выглядеть виноватым. Или очень вкусным». — Торп, уличный сорванец",
+        "language": "Russian",
+        "name": "Зоркая Птица Рок",
+        "text": "Полет\nКаждый раз, когда Зоркая Птица Рок атакует, вы можете вернуть целевое существо под контролем защищающегося игрока с выносливостью 2 или меньше в руку его владельца.",
+        "type": "Существо — Птица"
+      },
+      {
+        "flavorText": "「别看起来像是有罪。或是很可口。」 ～流浪儿所埔",
+        "language": "Chinese Simplified",
+        "name": "空徽洛克鸟",
+        "text": "飞行\n每当空徽洛克鸟攻击时，你可以将目标由防御牌手操控的生物移回其拥有者手上，且其防御力须等于或小于2。",
+        "type": "生物～鸟"
+      },
+      {
+        "flavorText": "「別看起來像是有罪。或是很可口。」 ～流浪兒所埔",
+        "language": "Chinese Traditional",
+        "name": "空徽洛克鳥",
+        "text": "飛行\n每當空徽洛克鳥攻擊時，你可以將目標由防禦玩家操控的生物移回其擁有者手上，且其防禦力須等於或小於2。",
+        "type": "生物～鳥"
+      }
+    ],
+    "layout": "normal",
+    "legalities": {
+      "commander": "Legal",
+      "duel": "Legal",
+      "legacy": "Legal",
+      "modern": "Legal",
+      "penny": "Legal",
+      "pioneer": "Legal",
+      "vintage": "Legal"
+    },
+    "manaCost": "{2}{W}{U}",
+    "mtgoFoilId": 46762,
+    "mtgoId": 46761,
+    "name": "Skymark Roc",
+    "power": "3",
+    "printings": [
+      "GK2",
+      "RTR"
+    ],
+    "purchaseUrls": {
+      "cardmarket": "https://mtgjson.com/links/a803e29285b3a6eb",
+      "tcgplayer": "https://mtgjson.com/links/01526fc1a3381fa6"
+    },
+    "rulings": [],
+    "scryfallOracleId": "b7564801-e35c-4d5c-afa9-99b33b35309c",
+    "subtypes": [
+      "Bird"
+    ],
+    "supertypes": [],
+    "text": "Flying\nWhenever Skymark Roc attacks, you may return target creature defending player controls with toughness 2 or less to its owner's hand.",
+    "toughness": "3",
+    "type": "Creature — Bird",
+    "types": [
+      "Creature"
+    ],
+    "uuid": "fa231907-555f-5c2e-b969-decaa6c66c1f"
+  },
+  "Smiting Helix": {
+    "colorIdentity": [
+      "B",
+      "R",
+      "W"
+    ],
+    "colors": [
+      "B"
+    ],
+    "convertedManaCost": 4.0,
+    "edhrecRank": 15626,
+    "foreignData": [],
+    "layout": "normal",
+    "legalities": {
+      "commander": "Legal",
+      "duel": "Legal",
+      "legacy": "Legal",
+      "modern": "Legal",
+      "penny": "Legal",
+      "vintage": "Legal"
+    },
+    "manaCost": "{3}{B}",
+    "name": "Smiting Helix",
+    "printings": [
+      "MB1",
+      "MH1"
+    ],
+    "purchaseUrls": {
+      "tcgplayer": "https://mtgjson.com/links/cdafef1a43ba9e27"
+    },
+    "rulings": [
+      {
+        "date": "2019-06-14",
+        "text": "If the chosen target is an illegal target by the time Smiting Helix tries to resolve, the spell doesn’t resolve. You won’t gain 3 life."
+      },
+      {
+        "date": "2019-06-14",
+        "text": "Smiting Helix is always a black spell. It’s not red and white if you cast it for its flashback cost."
+      }
+    ],
+    "scryfallOracleId": "19d19e32-af13-4bb3-925f-8ed54cce2fcb",
+    "subtypes": [],
+    "supertypes": [],
+    "text": "Smiting Helix deals 3 damage to any target and you gain 3 life.\nFlashback {R}{W} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+    "type": "Sorcery",
+    "types": [
+      "Sorcery"
+    ],
+    "uuid": "6a2e9cf6-9a37-5859-b75e-0b0d9c7cbaaa"
+  },
+  "Tajic, Blade of the Legion": {
+    "colorIdentity": [
+      "R",
+      "W"
+    ],
+    "colors": [
+      "R",
+      "W"
+    ],
+    "convertedManaCost": 4.0,
+    "edhrecRank": 3823,
+    "foreignData": [
+      {
+        "flavorText": "„Durch das Labyrinth laufe ich allein, aber in den Kampf gehe ich mit der gesamten Macht der Legion.\"",
+        "language": "German",
+        "name": "Tajic, Schwert der Legion",
+        "text": "Tajic, das Schwert der Legion, ist unzerstörbar.\nBataillon — Immer wenn Tajic und mindestens zwei andere Kreaturen angreifen, erhält Tajic +5/+5 bis zum Ende des Zuges.",
+        "type": "Legendäre Kreatur — Mensch, Soldat"
+      },
+      {
+        "flavorText": "\"Yo corro por el laberinto en solitario, pero lucho con todo el poder de la Legión.\"",
+        "language": "Spanish",
+        "name": "Tájic, Espada de la Legión",
+        "text": "Tájic, Espada de la Legión es indestructible.\nBatallón — Siempre que Tájic y al menos otras dos criaturas ataquen, Tájic obtiene +5/+5 hasta el final del turno.",
+        "type": "Criatura legendaria — Soldado humano"
+      },
+      {
+        "flavorText": "« Je parcours seul le labyrinthe, mais je combats avec la pleine puissance de la Légion. »",
+        "language": "French",
+        "name": "Tajic, lame de la Légion",
+        "text": "Tajic, lame de la Légion est indestructible.\nBataillon — À chaque fois que Tajic et au moins deux autres créatures attaquent, Tajic gagne +5/+5 jusqu'à la fin du tour.",
+        "type": "Créature légendaire : humain et soldat"
+      },
+      {
+        "flavorText": "\"Corro nel labirinto da solo, ma combatto con tutta la potenza della Legione.\"",
+        "language": "Italian",
+        "name": "Tajic, Lama della Legione",
+        "text": "Tajic, Lama della Legione è indistruttibile.\nBattaglione — Ogniqualvolta Tajic e almeno altre due creature attaccano, Tajic prende +5/+5 fino alla fine del turno.",
+        "type": "Creatura Leggendaria — Soldato Umano"
+      },
+      {
+        "flavorText": "「俺は一人で迷路を走るが、軍の総力を背負って戦っているんだ。」",
+        "language": "Japanese",
+        "name": "軍勢の刃、タージク",
+        "text": "軍勢の刃、タージクは破壊されない。\n大隊 ― 軍勢の刃、タージクと少なくとも２体の他のクリーチャーが攻撃するたび、軍勢の刃、タージクはターン終了時まで＋５/＋５の修整を受ける。",
+        "type": "伝説のクリーチャー — 人間・兵士"
+      },
+      {
+        "flavorText": "\"미로를 탐험하는 것은 나 혼자지만 싸울 때는 보로스 전 장병의 힘이 함께한다.\"",
+        "language": "Korean",
+        "name": "보로스의 검 타직",
+        "text": "보로스의 검 타직은 파괴될 수 없다.\n부대전 — 보로스의 검 타직과 두 개 이상의 다른 생물이 공격할 때마다, 보로스의 검 타직은 턴종료까지 +5/+5를 받는다.",
+        "type": "전설적 생물 — 인간 병사"
+      },
+      {
+        "flavorText": "«Я иду по лабиринту один, но в бою вся мощь Легиона — за мной».",
+        "language": "Russian",
+        "name": "Тажик, Клинок Легиона",
+        "text": "Тажик, Клинок Легиона не может быть уничтожен.Батальон — Каждый раз, когда Тажик и как минимум два других существа атакуют, Тажик получает +5/+5 до конца хода.",
+        "type": "Легендарное Существо — Человек Солдат"
+      },
+      {
+        "flavorText": "「虽然我独身奔越迷宫，但有整个教团的力量助我作战。」",
+        "language": "Chinese Simplified",
+        "name": "教团之刃塔疾克",
+        "text": "教团之刃塔疾克不会毁坏。\n协战～每当塔疾克与至少两个其他生物攻击时，塔疾克得+5/+5直到回合结束。",
+        "type": "传奇生物～人类／士兵"
+      },
+      {
+        "flavorText": "「雖然我獨身奔越迷宮，但有整個教團的力量助我作戰。」",
+        "language": "Chinese Traditional",
+        "name": "教團之刃塔疾克",
+        "text": "教團之刃塔疾克不會毀壞。\n協戰～每當塔疾克與至少兩個其他生物攻擊時，塔疾克得+5/+5直到回合結束。",
+        "type": "傳奇生物～人類／士兵"
+      }
+    ],
+    "layout": "normal",
+    "leadershipSkills": {
+      "brawl": false,
+      "commander": true,
+      "oathbreaker": false
+    },
+    "legalities": {
+      "commander": "Legal",
+      "duel": "Legal",
+      "legacy": "Legal",
+      "modern": "Legal",
+      "penny": "Legal",
+      "pioneer": "Legal",
+      "vintage": "Legal"
+    },
+    "manaCost": "{2}{R}{W}",
+    "mtgoFoilId": 48219,
+    "mtgoId": 48218,
+    "name": "Tajic, Blade of the Legion",
+    "power": "2",
+    "printings": [
+      "DGM"
+    ],
+    "purchaseUrls": {
+      "cardmarket": "https://mtgjson.com/links/0cac60a9e167ef8a",
+      "tcgplayer": "https://mtgjson.com/links/220f2953f4743060"
+    },
+    "rulings": [
+      {
+        "date": "2013-04-15",
+        "text": "The effects of battalion abilities vary from card to card. Read each card carefully."
+      },
+      {
+        "date": "2013-04-15",
+        "text": "The three attacking creatures don’t have to be attacking the same player or planeswalker."
+      },
+      {
+        "date": "2013-04-15",
+        "text": "Once a battalion ability has triggered, it doesn’t matter how many creatures are still attacking when that ability resolves."
+      }
+    ],
+    "scryfallOracleId": "8951d797-6356-4f27-a6de-e013216274d6",
+    "subtypes": [
+      "Human",
+      "Soldier"
+    ],
+    "supertypes": [
+      "Legendary"
+    ],
+    "text": "Indestructible\nBattalion — Whenever Tajic, Blade of the Legion and at least two other creatures attack, Tajic gets +5/+5 until end of turn.",
+    "toughness": "2",
+    "type": "Legendary Creature — Human Soldier",
+    "types": [
+      "Creature"
+    ],
+    "uuid": "7d17411f-def2-5e36-b9f7-d2af3898494e"
+  }
+}
