@@ -1,6 +1,8 @@
 module Main exposing (Model, Msg(..), init, main, update, view)
 
 import Browser
+import Card as C exposing (Card)
+import Data as D exposing (Data)
 import Html exposing (Html, button, div, text)
 import Html.Events exposing (onClick)
 
@@ -55,4 +57,5 @@ view model =
         [ button [ onClick Decrement ] [ text "-" ]
         , div [] [ text (String.fromInt model) ]
         , button [ onClick Increment ] [ text "+" ]
+        , D.displayData D.tempData
         ]
