@@ -1,4 +1,4 @@
-module Data exposing (CardRelationship, Data, RelationMatrix(..), createData, displayData, tempData, tempDist, tempNames)
+module Data exposing (CardRelationship, Data, RelationMatrix(..), createData, tempData, tempDist, tempNames)
 
 import Array as A exposing (Array, get)
 import Card as C exposing (Card)
@@ -39,38 +39,6 @@ createData distanceMatrix cardList =
         A.map f distanceMatrix
     , cardList = cardList
     }
-
-
-
--- Note, this function is a debug data dump, not made to look good
-
-
-displayData : Data -> Html msg
-displayData data =
-    let
-        error =
-            div [] [ text "ERROR" ]
-
-        displayCardRel cardRel =
-            div [ style "display" "inline-block" ]
-                [ div [ style "display" "block" ]
-                    [ text <| String.fromFloat cardRel.distance, getCard cardRel.cardIndex ]
-                ]
-
-        getCard : Int -> Html msg
-        getCard i =
-            case A.get i data.cardList of
-                Just c ->
-                    C.display c
-
-                Nothing ->
-                    error
-
-        displayRow i row =
-            div []
-                [ div [] <| getCard i :: List.map displayCardRel row ]
-    in
-    div [] (A.toList <| A.indexedMap displayRow data.cardRelationships)
 
 
 tempData : Data
