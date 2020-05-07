@@ -4,8 +4,10 @@ import Array as A
 import Browser
 import Card as C exposing (Card)
 import Data as D exposing (Data)
-import Html exposing (Html, button, div, text)
-import Html.Attributes exposing (class, style)
+import File exposing (File)
+import File.Select exposing (file)
+import Html exposing (Html, a, button, div, text)
+import Html.Attributes exposing (class, href, style)
 import Html.Events exposing (onClick)
 
 
@@ -14,20 +16,27 @@ import Html.Events exposing (onClick)
 
 
 main =
-    Browser.sandbox { init = init, update = update, view = view }
+    Browser.element
+        { init = init
+        , update = update
+        , view = view
+        , subscriptions = subscriptions
+        }
 
 
 
 -- MODEL
 
 
-type alias Model =
-    { currentCard : Maybe Int }
+type Model
+    = Empty
+    | ShowCards { currentCard : Maybe Int, data : Data }
+    | Broken String
 
 
-init : Model
-init =
-    { currentCard = Nothing }
+init : () -> ( Model, Cmd Msg )
+init _ =
+    ( Empty, Cmd.none )
 
 
 
@@ -37,16 +46,41 @@ init =
 type Msg
     = SetCard Int
     | Reset
+    | RequestData
+    | DataLoaded File
 
 
-update : Msg -> Model -> Model
+update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
-    case msg of
-        SetCard n ->
-            { model | currentCard = Just n }
+    case ( msg, model ) of
+        ( SetCard n, ShowCards mod ) ->
+            ( ShowCards { mod | currentCard = Just n }, Cmd.none )
 
-        Reset ->
-            { model | currentCard = Nothing }
+        ( Reset, _ ) ->
+            ( Empty, Cmd.none )
+
+        ( RequestData, Empty ) ->
+            ( model, requestJson )
+
+        ( DataLoaded f, Empty ) ->
+            ( ShowCards { currentCard = Nothing, data = D.tempData }, Cmd.none )
+
+        ( _, _ ) ->
+            ( model, Cmd.none )
+
+
+requestJson : Cmd Msg
+requestJson =
+    file [ "application/json", "text/json" ] DataLoaded
+
+
+
+-- SUBSCRIPTIONS
+
+
+subscriptions : Model -> Sub Msg
+subscriptions model =
+    Sub.none
 
 
 
@@ -56,19 +90,45 @@ update msg model =
 view : Model -> Html Msg
 view model =
     let
-        cardDisplay =
-            case model.currentCard of
-                Just n ->
-                    displayRow n D.tempData
+        mainDisplay =
+            case model of
+                Empty ->
+                    div []
+                        [ text "currently empty"
+                        , button [ onClick RequestData ] [ text "Load Data" ]
+                        ]
 
-                Nothing ->
-                    displayData D.tempData
+                ShowCards m ->
+                    case m.currentCard of
+                        Nothing ->
+                            displayCardList m.data
+
+                        Just i ->
+                            displayRow i m.data
+
+                Broken s ->
+                    text <| String.concat [ "ERROR: ", s ]
     in
     div []
         [ text "My page wowee"
-        , cardDisplay
-        , button [ onClick Reset ] [ text "Reset" ]
+        , mainDisplay
+        , div [] [ button [ onClick Reset ] [ text "Reset" ] ]
+        , div [] [ text "CSC 664 final project Kevin & Aaron" ]
+        , div []
+            [ a [ href "https://github.com/SudoSanauu/Multimedia-Project-CSC664_FinalProject_Group8" ]
+                [ text "Project Link" ]
+            ]
         ]
+
+
+displayCardList : Data -> Html Msg
+displayCardList d =
+    let
+        f i card =
+            div [ onClick (SetCard i), style "display" "inline-block" ]
+                [ C.display card ]
+    in
+    div [] (A.toList <| A.indexedMap f d.cardList)
 
 
 displayRow : Int -> Data -> Html Msg
@@ -115,4 +175,5 @@ displayData data =
 
 error : Html Msg
 error =
-    div [] [ text "ERROR" ]
+    div [ onClick Reset ]
+        [ text "ERROR: Something went wrong where it shouldn't have, please click this text to reset the app." ]
