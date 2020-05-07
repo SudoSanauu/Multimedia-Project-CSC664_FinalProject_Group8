@@ -1,6 +1,5 @@
 import sys
 import json
-import re
 import numpy as np
 import text_processing as tp
 import mat_processing as matp
