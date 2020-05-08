@@ -5,19 +5,19 @@ import sys
 import json
 
 # CONSTANTS
-ngram_vals = [1, 3]
+ngram_vals = [2]
 
 weights = {
-	'ngram_weights': [0.33, 1],
-	'ngram_idf?': True,
-	'color_weight': 0.33,
-	'colorid_weight': 0.33,
+	'ngram_weights': [0.67],
+	'ngram_idf?': False,
+	'color_weight': 1.0,
+	'colorid_weight': 1.0,
 	'subtype_weight': 0.33,
 	'type_weight': 1.0,
-	'supertype_weight': 0.33,
-	'cmc_weight': 0.33,
-	'mana_cost_weight': 0.33,
-	'pwr_tgh_weight': 0.33
+	'supertype_weight': 1.0,
+	'cmc_weight': 0.67,
+	'mana_cost_weight': 1.0,
+	'pwr_tgh_weight': 1.0
 }
 
 if len(sys.argv) != 3:
@@ -72,8 +72,16 @@ out_json = {
 	'cards': cleaned_cards
 }
 
-with open(dest_path, 'w') as f:
+with open(dest_path + '.json', 'w') as f:
 	json.dump(out_json, f)
+
+with open(dest_path + '.npz', 'wb') as f:
+	np.savez_compressed(f,
+		data_mat=matrix_data['data_mat'], 
+		card_names=np.array(matrix_data['card_names']), 
+		feature_map=np.array( list(matrix_data['feature_map'].items()) ),
+		dist_mat=dist_mat
+	)
 
 print('Finished successfully')
 

@@ -32,8 +32,12 @@ with open(src_path, 'rb') as f:
 	if not isinstance(feature_map, np.ndarray):
 		feature_map = npy_file.get('attr_map')
 
-# create distance matrix
-dist_matrx = matp.create_distance_mat(data_mat)
+	# try to load dist_mat
+	dist_mat = npy_file.get('dist')
+
+# create distance matrix if not there
+if dist_mat == None:
+	dist_mat = matp.create_distance_mat(data_mat)
 
 in_str = ''
 while in_str != 'q':
@@ -46,20 +50,26 @@ while in_str != 'q':
 		i = int(in_str)
 		print("distances for card ", i, " ", card_names[i])
 		for j in range(0,len(card_names)):
-			print("{0:30}{1:f}".format(card_names[j],dist_matrx[i][j]))
+			print("{0:30}{1:f}".format(card_names[j],dist_mat[i][j]))
 		
 		fig = plt.figure()
 		ax = fig.add_axes([0,0,1,1])
-		ax.bar(card_names, dist_matrx[i])
+		ax.bar(card_names, dist_mat[i])
 		plt.show()
 
 	elif in_str == 'p':  # print the distance matrix
-		for i in range(0, len(dist_matrx)):
-			print(['{:.2f}'.format(x) for x in dist_matrx[i]])
+		for i in range(0, len(dist_mat)):
+			print(['{:.2f}'.format(x) for x in dist_mat[i]])
 
 	elif in_str == 'd': # difference between mats
-		print(matp.dist_mat_diff(dist_matrx))
+		err_mat = np.array(dist_mat - matp.hand_weights_17)
+		for i in range(0, len(err_mat)):
+			print(['{:+.2f}'.format(x) for x in err_mat[i]])
 
+		diff = matp.dist_mat_diff(dist_mat, matp.hand_weights_17)
+		sqr_diff = matp.square_diff(dist_mat, matp.hand_weights_17)
+		print("difference: ", diff, " ave: ", diff/(17*16))
+		print("square difference: ", sqr_diff, " ave: ", sqr_diff/(17*16))
 	elif in_str == 'q':
 		continue
 	# if in_str == 'h' or in_str == '?':
