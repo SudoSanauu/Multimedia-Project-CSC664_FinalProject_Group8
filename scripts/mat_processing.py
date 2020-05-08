@@ -40,25 +40,28 @@ def insert_incr_dict(inDict, token):
 # take in a list of cards (dicts), and the ngrams to each card
 def add_features(card_list, ngram_vals):
 	for c in card_list:
-		tokens = tp.rules_tokenize(c)
-		ngrams = []
+		add_card_features(c, ngram_vals)
 
-		for n in ngram_vals:
-			# make a list of ngrams for this n
-			ngs = tp.token_to_ngrams(tokens, n)
-			# give a prefix to show what they are an ngram of
-			ngs = list(map(lambda x: '%' + str(n) + x, ngs))
-			# append those ngs to the master list
-			ngrams.append(ngs)
+def add_card_features(card, ngram_vals):
+	tokens = tp.rules_tokenize(card)
+	ngrams = []
 
-		manacost_tkns = tp.manacost_tokenize(c)
+	for n in ngram_vals:
+		# make a list of ngrams for this n
+		ngs = tp.token_to_ngrams(tokens, n)
+		# give a prefix to show what they are an ngram of
+		ngs = list(map(lambda x: '%' + str(n) + x, ngs))
+		# append those ngs to the master list
+		ngrams.append(ngs)
 
-		# put that list in the card
-		c['ngrams'] = ngrams
-		c['ngramVals'] = ngram_vals
-		c['manaCostTkns'] = manacost_tkns
-		# NOTE: a better api would be to have an ngram dictionary with elements
-		# key=n and value=ngs for each n.
+	manacost_tkns = tp.manacost_tokenize(card)
+
+
+	# put that list in the card
+	tp.add_img_url(card)
+	card['ngrams'] = ngrams
+	card['ngramVals'] = ngram_vals
+	card['manaCostTkns'] = manacost_tkns
 
 def generate_mat_features(card_list):
 	ngram_doc_freq = {}

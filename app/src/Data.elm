@@ -18,6 +18,7 @@ type alias CardRelationship =
 
 type alias Data =
     { numCards : Int
+    , distanceMatrix : Array (Array Float)
     , cardRelationships : Array (List CardRelationship)
     , cardList : Array Card
     }
@@ -35,6 +36,7 @@ createData distanceMatrix cardList =
             List.sortBy .distance <| A.toList <| A.indexedMap ff row
     in
     { numCards = A.length cardList
+    , distanceMatrix = distanceMatrix
     , cardRelationships =
         A.map f distanceMatrix
     , cardList = cardList

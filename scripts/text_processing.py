@@ -57,6 +57,11 @@ def manacost_tokenize(card):
 	# splitting on }{ separates all the tokens 
 	return mana_split.split(mc[1:-1])
 
+def add_img_url(card):
+	if card["scryfallId"] != "" :
+		card["imgUrl"] = 'https://img.scryfall.com/cards/normal/front/' + \
+			card["scryfallId"][0] + '/' + card["scryfallId"][1] + '/' + \
+			card["scryfallId"] + '.jpg'
 
 def is_num(in_str):
 	try:
@@ -91,3 +96,35 @@ def token_to_ngrams(tokens, ngram_size):
 		outlist[i] = '(' + ngram + ')'
 	return outlist	
 
+
+def clean_card_json(card):
+	if ('names' in card) and (card['names'] != []):
+		return None
+
+	power = card.get("power", -1.0)
+	if power == "*":
+		power = 0.0
+	else:
+		power = float(power)
+
+	toughness = card.get("toughness", -1.0)
+	if toughness == "*":
+		toughness = 0.0
+	else:
+		toughness = float(toughness)
+
+	return {
+		"colorIdentity": card.get("colorIdentity",[]),
+		"colors": card.get("colors",[]),
+		"convertedManaCost": card.get("convertedManaCost",0),
+		"manaCost": card.get("manaCost", ""),
+		"name": card.get("name",""),
+		"power": power,
+		"scryfallId": card.get("scryfallId", ""),
+		"subtypes": card.get("subtypes",[]),
+		"supertypes": card.get("supertypes",[]),
+		"text": card.get("text",""),
+		"toughness": toughness,
+		"type": card.get("type"),
+		"types": card.get("types",[])
+	}

@@ -1,6 +1,8 @@
 module Main exposing (Model, Msg(..), init, main, update, view)
 
-import Array as A
+--import Debug exposing (log, toString)
+
+import Array as A exposing (Array)
 import Browser
 import Card as C exposing (Card)
 import Data as D exposing (Data)
@@ -9,6 +11,8 @@ import File.Select exposing (file)
 import Html exposing (Html, a, button, div, text)
 import Html.Attributes exposing (class, href, style)
 import Html.Events exposing (onClick)
+import Json.Decode as Decode exposing (Decoder, decodeString, field)
+import Task
 
 
 
@@ -48,6 +52,7 @@ type Msg
     | Reset
     | RequestData
     | DataLoaded File
+    | DecodeFile String
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -63,7 +68,10 @@ update msg model =
             ( model, requestJson )
 
         ( DataLoaded f, Empty ) ->
-            ( ShowCards { currentCard = Nothing, data = D.tempData }, Cmd.none )
+            ( model, read f )
+
+        ( DecodeFile s, Empty ) ->
+            ( fileStringToModel s, Cmd.none )
 
         ( _, _ ) ->
             ( model, Cmd.none )
@@ -72,6 +80,59 @@ update msg model =
 requestJson : Cmd Msg
 requestJson =
     file [ "application/json", "text/json" ] DataLoaded
+
+
+
+--fullDecoder : Decoder({  })
+
+
+type alias CardsAndMat =
+    { distanceMatrix : Array (Array Float)
+    , cards : Array Card
+    }
+
+
+fullDecoder : Decoder CardsAndMat
+fullDecoder =
+    Decode.map2 CardsAndMat
+        diffMatrixDecoder
+        cardListDecoder
+
+
+diffMatrixDecoder : Decoder (Array (Array Float))
+diffMatrixDecoder =
+    field "distMat" (Decode.array (Decode.array Decode.float))
+
+
+cardListDecoder : Decoder (Array Card)
+cardListDecoder =
+    field "cards" (Decode.array cardDecoder)
+
+
+cardDecoder : Decoder Card
+cardDecoder =
+    Decode.map2 Card
+        (field "name" Decode.string)
+        (field "imgUrl" Decode.string)
+
+
+read : File -> Cmd Msg
+read f =
+    Task.perform DecodeFile (File.toString f)
+
+
+fileStringToModel : String -> Model
+fileStringToModel fileString =
+    case decodeString fullDecoder fileString of
+        Ok cnm ->
+            ShowCards
+                { currentCard = Nothing
+                , data = D.createData cnm.distanceMatrix cnm.cards
+                }
+
+        Err e ->
+            --log (toString e) (Broken "Failed to decode your json file. Please try reseting and uploading another file.")
+            Broken "Failed to decode your json file. Please try reseting and uploading another file."
 
 
 
@@ -110,8 +171,7 @@ view model =
                     text <| String.concat [ "ERROR: ", s ]
     in
     div []
-        [ text "My page wowee"
-        , mainDisplay
+        [ mainDisplay
         , div [] [ button [ onClick Reset ] [ text "Reset" ] ]
         , div [] [ text "CSC 664 final project Kevin & Aaron" ]
         , div []
