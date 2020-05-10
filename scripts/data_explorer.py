@@ -61,15 +61,27 @@ while in_str != 'q':
 		for i in range(0, len(dist_mat)):
 			print(['{:.2f}'.format(x) for x in dist_mat[i]])
 
-	elif in_str == 'd': # difference between mats
-		err_mat = np.array(dist_mat - matp.hand_weights_17)
+	elif in_str == 'dTrain': # difference between mats
+		err_mat = np.array(dist_mat - matp.hand_train_weights_17)
 		for i in range(0, len(err_mat)):
 			print(['{:+.2f}'.format(x) for x in err_mat[i]])
 
-		diff = matp.dist_mat_diff(dist_mat, matp.hand_weights_17)
-		sqr_diff = matp.square_diff(dist_mat, matp.hand_weights_17)
+		diff = matp.dist_mat_diff(dist_mat, matp.hand_train_weights_17)
+		sqr_diff = matp.square_diff(dist_mat, matp.hand_train_weights_17)
 		print("difference: ", diff, " ave: ", diff/(17*16))
 		print("square difference: ", sqr_diff, " ave: ", sqr_diff/(17*16))
+
+	elif in_str == 'dTest': # difference between mats
+		err_mat = np.array(dist_mat - matp.hand_test_weights_17)
+		for i in range(0, len(err_mat)):
+			print(['{:+.2f}'.format(x) for x in err_mat[i]])
+
+		diff = matp.dist_mat_diff(dist_mat, matp.hand_test_weights_17)
+		sqr_diff = matp.square_diff(dist_mat, matp.hand_test_weights_17)
+		print("difference: ", diff, " ave: ", diff/(17*16))
+		print("square difference: ", sqr_diff, " ave: ", sqr_diff/(17*16))
+
+
 	elif in_str == 'q':
 		continue
 	# if in_str == 'h' or in_str == '?':
@@ -79,7 +91,8 @@ while in_str != 'q':
 		print('h or ?: help menu')
 		print('c: list the names and numbers of all the cards')
 		print("a card's number: print the distances for that card")
-		print("p: print table")
+		print("p: print dist table")
+		print("dTest/dTrain: show difference between ground truth and calculated dist table")
 
 
 

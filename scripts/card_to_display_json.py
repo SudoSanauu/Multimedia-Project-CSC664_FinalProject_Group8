@@ -5,19 +5,35 @@ import sys
 import json
 
 # CONSTANTS
-ngram_vals = [2]
+ngram_vals = [1]
 
+
+# # try one
+# weights = {
+# 	'ngram_weights': #[0.67], val is [2]
+# 	'ngram_idf?': False,
+# 	'color_weight': 1.0,
+# 	'colorid_weight': 1.0,
+# 	'subtype_weight': 0.33,
+# 	'type_weight': 1.0,
+# 	'supertype_weight': 1.0,
+# 	'cmc_weight': 0.67,
+# 	'mana_cost_weight': 1.0,
+# 	'pwr_tgh_weight': 1.0
+# }
+
+# try two
 weights = {
-	'ngram_weights': [0.67],
-	'ngram_idf?': False,
-	'color_weight': 1.0,
-	'colorid_weight': 1.0,
-	'subtype_weight': 0.33,
-	'type_weight': 1.0,
-	'supertype_weight': 1.0,
-	'cmc_weight': 0.67,
-	'mana_cost_weight': 1.0,
-	'pwr_tgh_weight': 1.0
+  "ngram_weights": [0.66], # val is [1]
+  "ngram_idf?": False,
+  "color_weight": 1.25,
+  "colorid_weight": 1.25,
+  "subtype_weight": 0.5,
+  "type_weight": 1.25,
+  "supertype_weight": 1.25,
+  "cmc_weight": 0.75,
+  "mana_cost_weight": 1.25,
+  "pwr_tgh_weight": 0.75
 }
 
 if len(sys.argv) != 3:
@@ -38,7 +54,8 @@ cleaned_cards = []
 
 # Eventually I need to figure out how to parse the json correctly depending on
 # which type it is and such
-for c in cards.values():
+# for c in cards.values():
+for c in cards:
 
 	new_c = tp.clean_card_json(c)
 	if new_c == None:
@@ -46,6 +63,8 @@ for c in cards.values():
 
 	matp.add_card_features(new_c, ngram_vals)
 	cleaned_cards.append(new_c)
+
+cleaned_cards.sort(key=lambda c: c['name'])
 
 print("finished preprocessing with ", len(cleaned_cards), " cards")
 
