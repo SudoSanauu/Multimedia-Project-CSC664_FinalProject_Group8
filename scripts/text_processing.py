@@ -62,6 +62,8 @@ def add_img_url(card):
 		card["imgUrl"] = 'https://img.scryfall.com/cards/normal/front/' + \
 			card["scryfallId"][0] + '/' + card["scryfallId"][1] + '/' + \
 			card["scryfallId"] + '.jpg'
+	else:
+		card['imgUrl'] = "https://images.all-free-download.com/images/graphiclarge/frowny_face_clip_art_13121.jpg"
 
 def is_num(in_str):
 	try:

@@ -45,15 +45,27 @@ dest_path = sys.argv[2]
 
 print("reading from ", card_path)
 with open(card_path, 'r') as f:
-	cards = json.load(f)
+	in_json = json.load(f)
+
+# to try and make this work for the different files someone may want to run it
+# on. Note, will only make imgUrl for specific printings.
+if type(in_json) == list:
+	cards = in_json
+elif type(in_json) == dict:
+	first = next(iter(in_json))
+	# if its just 
+	if in_json[first].get('cards') == None:
+		cards = list(in_json.values())
+	else:
+		cards = []
+		for mtg_set in in_json.values():
+			cards = cards + mtg_set['cards']
 
 
 
 print("preprocessing ",len(cards), " cards ...")
 cleaned_cards = []
 
-# Eventually I need to figure out how to parse the json correctly depending on
-# which type it is and such
 # for c in cards.values():
 for c in cards:
 
