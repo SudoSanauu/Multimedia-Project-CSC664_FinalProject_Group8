@@ -68,6 +68,7 @@ while in_str != 'q':
 
 		diff = matp.dist_mat_diff(dist_mat, matp.hand_train_weights_17)
 		sqr_diff = matp.square_diff(dist_mat, matp.hand_train_weights_17)
+		# only 17*16 bc the middle row is always 0's and vacuous
 		print("difference: ", diff, " ave: ", diff/(17*16))
 		print("square difference: ", sqr_diff, " ave: ", sqr_diff/(17*16))
 
