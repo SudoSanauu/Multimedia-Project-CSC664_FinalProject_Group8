@@ -9,7 +9,7 @@ import text_processing as tp
 # Constants
 color_arr = ['W','U','B','R','G']
 
-hand_weights_17 = np.matrix([
+hand_train_weights_17 = np.matrix([
 	[0.00, 7.50, 3.00, 5.00, 0.50, 6.00, 6.00, 7.75, 7.50, 0.50, 7.00, 6.00, 7.50, 8.50, 4.00, 7.50, 6.00],
 	[7.50, 0.00, 6.50, 6.50, 7.50, 4.50, 8.00, 3.00, 2.00, 7.50, 4.00, 8.50, 2.00, 8.50, 7.50, 1.00, 9.00],
 	[3.00, 6.50, 0.00, 2.00, 2.75, 7.50, 4.50, 6.00, 6.00, 2.75, 6.50, 5.50, 6.50, 7.00, 4.50, 6.50, 9.00],
@@ -29,6 +29,26 @@ hand_weights_17 = np.matrix([
 	[6.00, 9.00, 9.00, 9.00, 6.00, 3.75, 9.00, 8.00, 6.00, 6.00, 8.00, 8.50, 8.00, 8.50, 6.50, 7.00, 0.00]
 	])
 
+hand_test_weights_17 = np.matrix([
+	[0.00, 9.00, 3.25, 6.50, 5.00, 9.00, 9.00, 8.50, 6.00, 5.00, 4.00, 9.00, 1.50, 7.50, 9.00, 7.25, 7.00],
+	[9.00, 0.00, 9.00, 9.00, 9.00, 9.00, 9.00, 9.00, 8.50, 9.00, 9.00, 9.00, 9.00, 8.50, 9.00, 3.75, 7.50],
+	[3.25, 9.00, 0.00, 9.00, 7.75, 7.50, 7.50, 7.75, 6.50, 7.75, 8.50, 7.50, 3.75, 7.75, 7.50, 9.00, 7.00],
+	[6.50, 9.00, 9.00, 0.00, 7.00, 9.00, 3.25, 8.50, 9.00, 7.00, 7.00, 9.00, 6.25, 9.00, 3.00, 5.50, 7.00],
+	[5.00, 9.00, 7.75, 7.00, 0.00, 9.00, 9.00, 9.00, 7.25, 0.00, 2.50, 9.00, 5.50, 7.25, 9.00, 8.00, 9.00],
+	[9.00, 9.00, 7.50, 9.00, 9.00, 0.00, 7.00, 2.50, 8.50, 9.00, 9.00, 1.00, 9.00, 8.50, 7.00, 8.00, 9.00],
+	[9.00, 9.00, 7.50, 3.25, 9.00, 7.00, 0.00, 7.50, 9.00, 9.00, 9.00, 7.00, 9.00, 9.00, 0.25, 9.00, 9.00],
+	[8.50, 9.00, 7.75, 8.50, 9.00, 2.50, 7.50, 0.00, 9.00, 9.00, 9.00, 2.00, 9.00, 9.00, 7.50, 8.50, 9.00],
+	[6.00, 8.50, 6.50, 9.00, 7.25, 8.50, 9.00, 9.00, 0.00, 7.25, 7.75, 8.50, 6.50, 1.50, 9.00, 8.50, 8.50],
+	[5.00, 9.00, 7.75, 7.00, 0.00, 9.00, 9.00, 9.00, 7.25, 0.00, 2.45, 9.00, 5.50, 7.25, 9.00, 8.00, 9.00],
+	[4.00, 9.00, 8.50, 7.00, 2.50, 9.00, 9.00, 9.00, 7.75, 2.45, 0.00, 9.00, 4.50, 7.75, 9.00, 8.50, 9.00],
+	[9.00, 9.00, 7.50, 9.00, 9.00, 1.00, 7.00, 2.00, 8.50, 9.00, 9.00, 0.00, 9.00, 8.50, 7.00, 8.50, 9.00],
+	[1.50, 9.00, 3.75, 6.25, 5.50, 9.00, 9.00, 9.00, 6.50, 5.50, 4.50, 9.00, 0.00, 8.00, 9.00, 7.00, 8.50],
+	[7.50, 8.50, 7.75, 9.00, 7.25, 8.50, 9.00, 9.00, 1.50, 7.25, 7.75, 8.50, 8.00, 0.00, 9.00, 8.50, 9.00],
+	[9.00, 9.00, 7.50, 3.00, 9.00, 7.00, 0.25, 7.50, 9.00, 9.00, 9.00, 7.00, 9.00, 9.00, 0.00, 9.00, 9.00],
+	[7.25, 3.75, 9.00, 5.50, 8.00, 8.00, 9.00, 8.50, 8.50, 8.00, 8.50, 8.50, 7.00, 8.50, 9.00, 0.00, 8.00],
+	[7.00, 7.50, 7.00, 7.00, 9.00, 9.00, 9.00, 9.00, 8.50, 9.00, 9.00, 9.00, 8.50, 9.00, 9.00, 8.00, 0.00]
+	])
+
 # helper function for dictionary insertion
 def insert_incr_dict(inDict, token):
 	if token in inDict:
@@ -40,25 +60,28 @@ def insert_incr_dict(inDict, token):
 # take in a list of cards (dicts), and the ngrams to each card
 def add_features(card_list, ngram_vals):
 	for c in card_list:
-		tokens = tp.rules_tokenize(c)
-		ngrams = []
+		add_card_features(c, ngram_vals)
 
-		for n in ngram_vals:
-			# make a list of ngrams for this n
-			ngs = tp.token_to_ngrams(tokens, n)
-			# give a prefix to show what they are an ngram of
-			ngs = list(map(lambda x: '%' + str(n) + x, ngs))
-			# append those ngs to the master list
-			ngrams.append(ngs)
+def add_card_features(card, ngram_vals):
+	tokens = tp.rules_tokenize(card)
+	ngrams = []
 
-		manacost_tkns = tp.manacost_tokenize(c)
+	for n in ngram_vals:
+		# make a list of ngrams for this n
+		ngs = tp.token_to_ngrams(tokens, n)
+		# give a prefix to show what they are an ngram of
+		ngs = list(map(lambda x: '%' + str(n) + x, ngs))
+		# append those ngs to the master list
+		ngrams.append(ngs)
 
-		# put that list in the card
-		c['ngrams'] = ngrams
-		c['ngramVals'] = ngram_vals
-		c['manaCostTkns'] = manacost_tkns
-		# NOTE: a better api would be to have an ngram dictionary with elements
-		# key=n and value=ngs for each n.
+	manacost_tkns = tp.manacost_tokenize(card)
+
+
+	# put that list in the card
+	tp.add_img_url(card)
+	card['ngrams'] = ngrams
+	card['ngramVals'] = ngram_vals
+	card['manaCostTkns'] = manacost_tkns
 
 def generate_mat_features(card_list):
 	ngram_doc_freq = {}
@@ -217,5 +240,8 @@ def create_distance_mat(data_mat):
 			dist_matrx[i][j] = dist_matrx[j][i] = np.linalg.norm(data_mat[i] - data_mat[j])
 	return dist_matrx
 
-def dist_mat_diff(dist_mat1, dist_mat2=hand_weights_17):
+def dist_mat_diff(dist_mat1, dist_mat2):
 	return np.sum( np.absolute(dist_mat1 - dist_mat2) )
+
+def square_diff(dist_mat1, dist_mat2):
+	return np.sum( (dist_mat1 - dist_mat2) ** 2 )

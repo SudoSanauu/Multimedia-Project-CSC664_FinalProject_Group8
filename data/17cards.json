@@ -46,6 +46,7 @@
         "text": "If there are no other creatures on the battlefield when Aether Adept enters the battlefield, it must target itself."
       }
     ],
+    "scryfallId": "1640b76d-15d6-4b08-a34b-c5432259d570.jpg?1562900340",
     "scryfallOracleId": "e076067c-77b7-4a37-a62d-51434392dd53",
     "subtypes": [
       "Human",
@@ -173,6 +174,7 @@
         "text": "If the chosen target becomes an illegal target for Agonizing Syphon, the spell won’t resolve. You won’t gain life."
       }
     ],
+    "scryfallId": "0d8efd95-1c2f-4dd1-b70b-3cfb10ff3a28",
     "scryfallOracleId": "11669fe5-9298-4e1a-a4f7-6a4598dbc8dd",
     "subtypes": [],
     "supertypes": [],
@@ -304,6 +306,7 @@
         "text": "If a spell with an addendum ability is copied, the copy won’t give you the addendum bonus. This is because the copy wasn’t cast at all."
       }
     ],
+    "scryfallId": "637c2d6a-e6b8-4dc5-81aa-da1b7384e006",
     "scryfallOracleId": "ccfb612a-762d-41a7-bc3d-268c6abf8e85",
     "subtypes": [],
     "supertypes": [],
@@ -428,6 +431,7 @@
         "text": "If a spell with an addendum ability is copied, the copy won’t give you the addendum bonus. This is because the copy wasn’t cast at all."
       }
     ],
+    "scryfallId": "258aeef1-565a-4f19-b12c-d46d54ba231d",
     "scryfallOracleId": "b2f83483-24a4-45db-a04e-42ff732ca98a",
     "subtypes": [],
     "supertypes": [],
@@ -542,6 +546,7 @@
       "tcgplayer": "https://mtgjson.com/links/57cf5f97b7d3f9c2"
     },
     "rulings": [],
+    "scryfallId": "ccad82f5-5c5c-42ad-b66e-942f0d9631ca", 
     "scryfallOracleId": "fd28fe55-36cd-4242-8dd4-edb58fbb9895",
     "subtypes": [
       "Human",
@@ -649,6 +654,7 @@
         "text": "The effects of battalion abilities vary from card to card. Read each card carefully."
       }
     ],
+    "scryfallId": "e244c198-efdc-492a-9c52-76aac006de9d", 
     "scryfallOracleId": "7ea71a36-8fa8-4ba3-9cb1-7fc6917c3ddd",
     "subtypes": [
       "Angel"
@@ -707,6 +713,7 @@
         "text": "Due to errata, you no longer shuffle your library."
       }
     ],
+    "scryfallId": "bda887f9-ea83-435e-b9d6-48f979a5fdb7",
     "scryfallOracleId": "f6bd2902-7f8b-419e-bbc7-bcab0c1b7e01",
     "subtypes": [],
     "supertypes": [],
@@ -771,6 +778,7 @@
       "tcgplayer": "https://mtgjson.com/links/d7bcc2d0de1290a6"
     },
     "rulings": [],
+    "scryfallId": "32a180dd-9641-4546-8940-9b21084f0c71",
     "scryfallOracleId": "4457ed35-7c10-48c8-9776-456485fdf070",
     "subtypes": [],
     "supertypes": [],
@@ -862,6 +870,7 @@
         "text": "If the chosen target is illegal when Lightning Helix tries to resolve, it won’t resolve and none of its effects will happen. You won’t gain 3 life."
       }
     ],
+    "scryfallId": "3e897af5-d450-4a7c-a02a-543914c2c680",
     "scryfallOracleId": "800c258a-cfc4-4a54-a667-065ea8dea69e",
     "subtypes": [],
     "supertypes": [],
@@ -943,6 +952,7 @@
         "text": "If there are no other creatures on the battlefield when Man-o’-War enters the battlefield, its ability must target itself."
       }
     ],
+    "scryfallId": "0a767474-ba5a-4141-a926-a384bb1d3626",
     "scryfallOracleId": "67a3541c-8408-40c8-b44f-90035b860f57",
     "subtypes": [
       "Jellyfish"
@@ -1005,6 +1015,7 @@
         "text": "Even if you control a particular Oath, you can cast another of that Oath to take advantage of its enters-the-battlefield ability. It will enter the battlefield, causing its first ability to trigger. You will then choose one to keep, as detailed above, and then its enters-the-battlefield ability will resolve."
       }
     ],
+    "scryfallId": "f570b0cb-2f38-422d-89d6-22c85e085328",
     "scryfallOracleId": "53a0923f-7da8-4e31-a231-9b275916e2a2",
     "subtypes": [],
     "supertypes": [
@@ -1062,6 +1073,7 @@
         "text": "Even if you control a particular Oath, you can cast another of that Oath to take advantage of its enters-the-battlefield ability. It will enter the battlefield, causing its first ability to trigger. You will then choose one to keep, as detailed above, and then its enters-the-battlefield ability will resolve."
       }
     ],
+    "scryfallId": "e8e7b007-a14b-40b2-9de7-38545c50a073",
     "scryfallOracleId": "dc92b420-8ac7-4478-a287-3d897357be08",
     "subtypes": [],
     "supertypes": [
@@ -1116,6 +1128,7 @@
         "text": "If an opponent attacks more than one planeswalker you control, the last ability of Oath of Kaya triggers once for each of those attacked planeswalkers."
       }
     ],
+    "scryfallId": "faba010d-5b1b-4562-91d6-ec55303c4dcd",
     "scryfallOracleId": "8b3febb9-0597-46af-b005-982f1a31c83e",
     "subtypes": [],
     "supertypes": [
@@ -1168,6 +1181,7 @@
         "text": "Even if you control a particular Oath, you can cast another of that Oath to take advantage of its enters-the-battlefield ability. It will enter the battlefield, causing its first ability to trigger. You will then choose one to keep, as detailed above, and then its enters-the-battlefield ability will resolve."
       }
     ],
+    "scryfallId": "613513ea-55dd-4ae8-93b2-247e468112a6",
     "scryfallOracleId": "c4efdbab-711d-4269-9b24-b05d36f7e5c7",
     "subtypes": [],
     "supertypes": [
@@ -1287,6 +1301,7 @@
       "tcgplayer": "https://mtgjson.com/links/01526fc1a3381fa6"
     },
     "rulings": [],
+    "scryfallId": "60601296-2229-4c48-94cc-1903926750ce",
     "scryfallOracleId": "b7564801-e35c-4d5c-afa9-99b33b35309c",
     "subtypes": [
       "Bird"
@@ -1340,6 +1355,7 @@
         "text": "Smiting Helix is always a black spell. It’s not red and white if you cast it for its flashback cost."
       }
     ],
+    "scryfallId": "07c17401-6b4d-4280-8962-46e380ab2bf4",
     "scryfallOracleId": "19d19e32-af13-4bb3-925f-8ed54cce2fcb",
     "subtypes": [],
     "supertypes": [],
@@ -1467,6 +1483,7 @@
         "text": "Once a battalion ability has triggered, it doesn’t matter how many creatures are still attacking when that ability resolves."
       }
     ],
+    "scryfallId": "be5717c1-338e-446c-aa7e-93e79e4abb72",
     "scryfallOracleId": "8951d797-6356-4f27-a6de-e013216274d6",
     "subtypes": [
       "Human",
